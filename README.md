@@ -5,18 +5,18 @@
 # Modulo I - Foundations
 
 - [Intro to Computer Science](./00-IntroToCS)
-- [Javascript Avanzado I](./00-JavaScriptAvanzadoI)
-- [Javascript Avanzado II](./00-JavaScriptAvanzadoII)
-- [Estructura de Datos I](./01-EstructuraDeDatos)
-- [Estructura de Datos II](./01-EstructuraDeDatos)
-- [Algoritmos I](./02-Algoritmos)
-- [Algoritmos II](./02-Algoritmos)
+- [Javascript Avanzado I](./01-JavaScriptAvanzado-I)
+- [Javascript Avanzado II](./02-JavaScriptAvanzado-II)
+- [Estructura de Datos I](./03-EstructuraDeDatos-I)
+- [Estructura de Datos II](./04-EstructuraDeDatos-II)
+- [Algoritmos I](./05-Algoritmos-I)
+- [Algoritmos II](./06-Algoritmos-II)
 
 Extra:
 
  * [Patrones de JavaScript](https://addyosmani.com/resources/essentialjsdesignpatterns/book/)
- * [Manejo de errores](./00-JavaScriptAvanzado/errores.md)
- * [JS orientado a Objetos](./00-JavaScriptAvanzado/OOP.md)
+ * [Manejo de errores](./01-JavaScriptAvanzado-I/errores.md)
+ * [JS orientado a Objetos](./01-JavaScriptAvanzado-I/OOP.md)
 
 ## Links copados
 
