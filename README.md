@@ -4,26 +4,23 @@
 
 # Modulo I - Foundations
 
-## [Intro to Computer Science](./00-IntroToCS)
-
-## JavaScript a Fondo
-
-1. [Javascript Avanzado](./00-JavaScriptAvanzado)
-2. [Object Oriented Javascript](./00-JavaScriptAvanzado/OOP.md)
-
-> [En esta página Dmitry Soshnikov](http://dmitrysoshnikov.com/ecmascript/javascript-the-core/#this-value) explica muy a fondo varios conceptos del lenguaje, casi a nivel de la especificación técnica.
+- [Intro to Computer Science](./00-IntroToCS)
+- [Javascript Avanzado I](./00-JavaScriptAvanzadoI)
+- [Javascript Avanzado II](./00-JavaScriptAvanzadoII)
+- [Estructura de Datos I](./01-EstructuraDeDatos)
+- [Estructura de Datos II](./01-EstructuraDeDatos)
+- [Algoritmos I](./02-Algoritmos)
+- [Algoritmos II](./02-Algoritmos)
 
 Extra:
 
  * [Patrones de JavaScript](https://addyosmani.com/resources/essentialjsdesignpatterns/book/)
  * [Manejo de errores](./00-JavaScriptAvanzado/errores.md)
-
-## [Estructura de Datos](./01-EstructuraDeDatos)
-
-## [Algoritmos](./02-Algoritmos)
+ * [JS orientado a Objetos](./00-JavaScriptAvanzado/OOP.md)
 
 ## Links copados
 
+> [En esta página Dmitry Soshnikov](http://dmitrysoshnikov.com/ecmascript/javascript-the-core/#this-value) explica muy a fondo varios conceptos del lenguaje, casi a nivel de la especificación técnica.
 - __Streams y pipes__: [substack](https://github.com/substack/stream-handbook)
 - [__Event loop__](https://www.youtube.com/watch?v=8aGhZQkoFbQ)
 - [__Inheritance Patterns__](http://davidshariff.com/blog/javascript-inheritance-patterns/#first-article)

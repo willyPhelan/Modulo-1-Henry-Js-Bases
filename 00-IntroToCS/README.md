@@ -21,8 +21,8 @@ DecimalABinario(7) //  '111'
 >> No pueden usar funciones nativas como `ParseInt`
 >> 
 
-Para ejecutar los tests, posicionarse en la carpeta `M1` y ejecutar los siguentes comandos:
+Para ejecutar los tests, posicionarse en esta carpeta y ejecutar los siguentes comandos:
 ```
 npm install
-npm test CS.test.js
+npm test
 ```
