@@ -152,8 +152,8 @@ Justamente invocando estos métodos vamos a poder tener control sobre el keyword
 ```javascript
 
 var persona = {
-  nombre: 'Guille',
-  apellido: 'Aszyn',
+  nombre: 'Franco',
+  apellido: 'Chequer',
 
   getNombre: function(){
     var nombreCompleto = this.nombre + ' ' + this.apellido;
@@ -191,7 +191,7 @@ var logNombre = function(arg1, arg2){
   console.log(arg1 +' '+ this.getNombre() +' '+ arg2);
 }
 
-logNombre.call(persona, 'Hola', ', Cómo estas?'); //Hola Guille Aszyn , Cómo estas?
+logNombre.call(persona, 'Hola', ', Cómo estas?'); //Hola Franco Chequer , Cómo estas?
 ```
 De hecho, la función `apply` es casi igual a `call`, excepto que recibe los argumentos de distinta manera. `apply` necesita dos arguemntos, el primero es el objeto a bindear con `this` (igual que `call`) y el segundo parámetro es un arreglo, en este arreglo pasamos los argumentos que va a usar la función que invocamos. Por ejemplo, para obtener el mismo comportamiento que arriba, pero con `apply`:
 
@@ -200,7 +200,7 @@ var logNombre = function(arg1, arg2){
   console.log(arg1 +' '+ this.getNombre() +' '+ arg2);
 }
 
-logNombre.apply(persona, ['Hola', ', Cómo estas?']); //Hola Guille Aszyn , Cómo estas?
+logNombre.apply(persona, ['Hola', ', Cómo estas?']); //Hola Franco Chequer , Cómo estas?
 ```
 
 Un arreglo puede ser más fácil de pasar cuando no sabemos a priori cuantos argumentos le voy a pasar.
@@ -212,15 +212,15 @@ Veamos un simple ejemplo donde podríamos usarlos, esto se conoce cómo __functi
 
 ```javascript
 var persona2 = {
-  nombre: 'Santi',
-  apellido: 'Scanlan'
+  nombre: 'Manu',
+  apellido: 'Barna'
 };
 ```
 
 Ahora, vamos a pedirle prestado el método `getNombre` a la primera _persona_ y la vamos a usar con la nueva.
 
 ```javascript
-persona.getNombre.call(persona2); //'Santi Scanlan'
+persona.getNombre.call(persona2); //'Manu Barna'
 ```
 
 Con esto pudimos invocar un método de un objeto, pero usándolo con otro!
