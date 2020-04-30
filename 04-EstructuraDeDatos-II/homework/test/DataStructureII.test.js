@@ -14,7 +14,7 @@ describe('binarySearchTree', function() {
     testArr = [];
   });
 
-  it('tiene metodos llamados `insert`, `contains`, `depthFirstForEach`, y otros', function() {
+  it('tiene metodos llamados `insert`, `contains`, `depthFirstForEach`, y `size`', function() {
     expect(typeof tree.insert).toBe('function');
     expect(typeof tree.contains).toBe('function');
     expect(typeof tree.depthFirstForEach).toBe('function');
@@ -182,5 +182,3 @@ describe('HashTable', function() {
   });
 
 });
-
-

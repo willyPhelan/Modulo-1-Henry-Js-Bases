@@ -114,16 +114,16 @@ describe('Una linked list', function() {
     linkedList = new LinkedList();
   });
 
-  it('tiene metodos `addToTail`, `removeTail`, y `search`', function() {
-    expect(typeof linkedList.addToTail).toBe('function');
-    expect(typeof linkedList.removeTail).toBe('function');
+  it('tiene metodos `add`, `remove`, y `search`', function() {
+    expect(typeof linkedList.add).toBe('function');
+    expect(typeof linkedList.remove).toBe('function');
     expect(typeof linkedList.search).toBe('function');
   });
 
-  it('empiezan tail como falso', function () {
-    expect(linkedList.hasOwnProperty('tail')).toBe(true);
-    expect(linkedList.tail).toBeFalsy();
-    expect(linkedList.removeTail()).toBeFalsy();
+  it('empiezan head como null', function () {
+    expect(linkedList.hasOwnProperty('head')).toBe(true);
+    expect(linkedList.head).toBeFalsy();
+    expect(linkedList.remove()).toBeFalsy();
   });
 
   it('tiene una clase Node para representar un nodo', function() {
@@ -140,44 +140,44 @@ describe('Una linked list', function() {
     expect(node.next).toBe(null);
   });
 
-  it('linkedlist deberia usar la clase Node para agregar nodos en addToTail', function() {
-    linkedList.addToTail('first');
-    expect(linkedList.tail instanceof Node).toBe(true);
+  it('linkedlist deberia usar la clase Node para agregar nodos en add', function() {
+    linkedList.add('first');
+    expect(linkedList.head instanceof Node).toBe(true);
   });
 
-  it('addToTail agrega los elementos linkeandolos entre ellos a traves del next', function() {
-    linkedList.addToTail('first');
-    linkedList.addToTail('second');
-    expect(linkedList.tail.value).toBe('first');
-    expect(linkedList.tail.next.value).toBe('second');
-    expect(linkedList.tail.next.next).toBe(null);
+  it('add agrega los elementos linkeandolos entre ellos a traves del next', function() {
+    linkedList.add('first');
+    linkedList.add('second');
+    expect(linkedList.head.value).toBe('first');
+    expect(linkedList.head.next.value).toBe('second');
+    expect(linkedList.head.next.next).toBe(null);
   });
 
-  it('removetail deberia retornar false si la lista esta vacia', function() {
-    expect(linkedList.removeTail()).toBeFalsy();
+  it('remove deberia retornar null si la lista esta vacia', function() {
+    expect(linkedList.remove()).toBeFalsy();
   });
 
-  it('removetail deberia sacar el ultimo ingresado', function() {
-    linkedList.addToTail('first');
-    linkedList.addToTail('second');
-    expect(linkedList.removeTail()).toBe('second');
-    expect(linkedList.removeTail()).toBe('first');
+  it('remove deberia sacar el ultimo nodo ingresado y devolver su valor', function() {
+    linkedList.add('first');
+    linkedList.add('second');
+    expect(linkedList.remove()).toBe('second');
+    expect(linkedList.remove()).toBe('first');
   });
 
-  it('el tail deberia ser null cuando se sacan todos los nodos', function() {
-    expect(linkedList.removeTail()).toBeFalsy();
-    linkedList.addToTail('one');
-    expect(linkedList.removeTail()).toBe('one');
-    expect(linkedList.removeTail()).toBeFalsy();
-    expect(linkedList.tail).toBeFalsy();
+  it('el head deberia ser null cuando se sacan todos los nodos', function() {
+    expect(linkedList.remove()).toBeFalsy();
+    linkedList.add('one');
+    expect(linkedList.remove()).toBe('one');
+    expect(linkedList.remove()).toBeFalsy();
+    expect(linkedList.head).toBeFalsy();
   });
 
 
   it('deberia devolver los valores correctos para buscar', function() {
-    linkedList.addToTail('one');
-    linkedList.addToTail('two');
-    linkedList.addToTail('three');
-    linkedList.addToTail('four');
+    linkedList.add('one');
+    linkedList.add('two');
+    linkedList.add('three');
+    linkedList.add('four');
     expect(linkedList.search('two')).toBe('two');
     expect(linkedList.search('sdd')).toBe(null);
     expect(linkedList.search('one')).toBe('one');
@@ -185,8 +185,8 @@ describe('Una linked list', function() {
   });
 
   it('deberia poder tomar strings y funciones ambos como search inputs', function() {
-    linkedList.addToTail('one');
-    linkedList.addToTail('two');
+    linkedList.add('one');
+    linkedList.add('two');
     expect(linkedList.search(function(nodeValue) {
       return nodeValue === 'two';
     })).toBe('two');
@@ -202,9 +202,9 @@ describe('Una linked list', function() {
       this.city = city;
     }
 
-    linkedList.addToTail(new UserNode('Nimit', 'nimit@fs.com', 'New York'));
-    linkedList.addToTail(new UserNode('David', 'david@fs.com', 'New York'));
-    linkedList.addToTail(new UserNode('Paul', 'paul@yc.com', 'Mountain View'));
+    linkedList.add(new UserNode('Nimit', 'nimit@fs.com', 'New York'));
+    linkedList.add(new UserNode('David', 'david@fs.com', 'New York'));
+    linkedList.add(new UserNode('Paul', 'paul@yc.com', 'Mountain View'));
 
     expect(linkedList.search(function (userNode) {
       return userNode.name === 'Nimit';
