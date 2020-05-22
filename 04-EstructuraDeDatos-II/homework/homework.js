@@ -1,16 +1,23 @@
 // resolve estos ejercicios usando recursión
 
-// Binary Seach Tree
-// 'tiene metodos llamados `insert`, `contains`, `depthFirstForEach`, 'breadthFirstForEach' y 'size'
-// corre depth-first (en recorrido "in-order") cuando depthFirstForEach() es ejecutado sin ninguna opcion o con la opcion "in-order
-// corre depth-first (en recorrido "pre-order") cuando depthFirstForEach() es ejecutado con la opcion "pre-order"
-// corre depth-first (en recorrido "post-order" cuando depthFirstForEach() es ejecutado con la opcion "post-order"
-// corre breadth-first cuando breadthFirstForEach() es ejecutado
-// Observar imagen de la carpeta "homework" llamada "bst.png". Allí encontraran dibujado el arbol utilizado para los tests
-function BinarySearchTree() {
+// Implementa la clase LinkedList
+// tiene metodos `add`, `remove`, y `search`
+// add: Agrega un valor en el final de la lista. Modifica solo el puntero tail.
+// Ej:      Head --> null
+// add(1):  Head --> 1 --> null
+// add(2):  Head --> 1 --> 2 --> null
+// remove:  Eliminar el último nodo de la lista y devuelve su valor. Resuelve correctamente una lista de un solo nodo.
+// Ej:         Head --> 1
+// remove():   Head --> null y devuelve 1
+// search: Busca un valor dentro de la lista. Puede recibir un valor o una función. Si no hubiera resultados, devuelve null.
+
+function LinkedList() {
 
 }
 
+function Node(value){
+
+}
 
 // Hash Table
 // Una hash table contiene un arreglo de "contenedores" donde puede guardar información.
@@ -31,6 +38,7 @@ function HashTable() {
 // --------------------------------
 
 module.exports = {
-  HashTable,
-  BinarySearchTree
+  Node,
+  LinkedList,
+  HashTable
 };

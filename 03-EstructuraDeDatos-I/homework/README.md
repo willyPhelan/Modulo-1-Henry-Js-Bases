@@ -2,8 +2,12 @@
 
 Escribir las soluciones a los ejercicios en `homework.js`.
 
-Para correr los tests, desde la carpeta `M1` ejecutar:
+Para correr los tests, desde la carpeta `homework` ejecutar:
 
 ```
-npm test
+npm install
+```
+
+```
+npm test DataStructure.test.js
 ```
