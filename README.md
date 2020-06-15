@@ -9,8 +9,9 @@
 - [Javascript Avanzado II](./02-JavaScriptAvanzado-II)
 - [Estructura de Datos I](./03-EstructuraDeDatos-I)
 - [Estructura de Datos II](./04-EstructuraDeDatos-II)
-- [Algoritmos I](./05-Algoritmos-I)
-- [Algoritmos II](./06-Algoritmos-II)
+- [Estructura de Datos III](./05-EstructuraDeDatos-III)
+- [Algoritmos I](./06-Algoritmos-I)
+- [Algoritmos II](./07-Algoritmos-II)
 
 Extra:
 
