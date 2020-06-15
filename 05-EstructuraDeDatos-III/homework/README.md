@@ -13,20 +13,17 @@ npm test DataStructureIII.test.js
 ```
 
 
-Extra Credit:
+## Extra Credit:
+
 Si terminaste, podes intentar implementar estas estructuras. Son super díficiles, y probablemente no tengas tiempo! No te preocupes, casi nadie llega hasta acá.
 
-## Árboles
-
-### Árbol binario
+#### Árbol binario
 
 * Una función que balancee el árbol binario.   	
 
 ----
 
-## God Mode
-
-### Arbol AVL :godmode: 
+#### God Mode: Arbol AVL :godmode: 
 
 Implementar un árbol AVL que realice las sigiuentes operaciones:
 	- Insertar un elemento.
