@@ -1,7 +1,7 @@
 # Henry
 
 <p>
-  <a href="https://airtable.com/shr5KEX8NFdrG14j9?prefill_clase=01-JavaScriptAvanzado-I">
+  <a href="https://airtable.com/shr5KEX8NFdrG14j9?prefill_clase=01-JavaScriptAvanzado-I" target="_blank">
     <img src="https://static.thenounproject.com/png/204643-200.png" width="100"/>
     <br>
     Hacé click acá para dejar tu feedback sobre esta clase.
