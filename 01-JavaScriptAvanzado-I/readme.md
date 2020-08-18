@@ -1,5 +1,13 @@
 # Henry
 
+<p>
+  <a href="https://airtable.com/shr5KEX8NFdrG14j9?prefill_clase=01-JavaScriptAvanzado-I">
+    <img src="https://static.thenounproject.com/png/204643-200.png" width="100"/>
+    <br>
+    Hacé click acá para dejar tu feedback sobre esta clase.
+  </a>
+</p>
+
 # Entendiendo JavaScript a Fondo
 
 Empezemos con algunos fundamentos fundamentales:
