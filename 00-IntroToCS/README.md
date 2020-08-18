@@ -1,3 +1,16 @@
+
+
+
+
+<p>
+  <a href="https://airtable.com/shr5KEX8NFdrG14j9?prefill_clase=00-IntroToCS">
+    <img src="https://static.thenounproject.com/png/204643-200.png" width="100"/>
+    <br>
+    Hacé click acá para dejar tu feedback sobre esta clase.
+  </a>
+</p>
+
+
 ## Numeros Binarios
 
 Escribir una función que convierta lo números binarios a números decimal.
