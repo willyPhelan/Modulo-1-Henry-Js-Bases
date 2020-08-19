@@ -1,16 +1,27 @@
 # Henry
 
-<p>
-  <a href="https://airtable.com/shr5KEX8NFdrG14j9?prefill_clase=01-JavaScriptAvanzado-I" target="_blank">
-    <img src="https://static.thenounproject.com/png/204643-200.png" width="100"/>
-    <br>
-    Hacé click acá para dejar tu feedback sobre esta clase.
-  </a>
-</p>
+<table width="100%" style='table-layout:fixed;'>
+  <tr>
+	  <td>
+	  	<a href="https://airtable.com/shr5KEX8NFdrG14j9?prefill_clase=01-JavaScriptAvanzado-I">
+			<img src="https://static.thenounproject.com/png/204643-200.png" width="100"/>
+			<br>
+			Hacé click acá para dejar tu feedback sobre esta clase.
+	  	</a>
+	  </td>
+     	<td>
+	    <a href="https://quizizz.com/join/quiz/5f3d1d3f0a84b6001c7d6d9a/start?from=soloLinkShare&referrer=5ee12dad966f1e001b82c78b">
+	    	<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/HSQuiz.svg/768px-HSQuiz.svg.png" width="100" height="100"/>
+	    	<br>
+	    	Hacé click acá completar el quizz teórico de esta lecture.
+	    </a>
+	</td>
+  </tr>
+</table>
 
 # Entendiendo JavaScript a Fondo
 
-Empezemos con algunos fundamentos fundamentales:
+Empecemos con algunos fundamentos:
 
 ## Single Threaded y Sincrónico
 
@@ -28,37 +39,37 @@ Un programa que lee tu código y determina qué hace y si su sintaxis es válida
 
 ## Lexical Environment
 
-El lexical environment tiene que ver con dónde están declarados ciertos statements o expresiones en tu código. Es decir, el comportamiento de JavaScript puede cambiar según dónde hayas escrito el código.
+El lexical environment tiene que ver con *dónde* están declarados ciertos statements o expresiones en tu código. Es decir, el comportamiento de JavaScript puede cambiar según dónde hayas escrito el código.
 
 ```javascript
-function hola(){
-	var foo = 'Hola!';
+function hola() {
+  var foo = 'Hola!';
 }
 
 var bar = 'Chao';
 ```
 
-Por ejemplo, para el interprete las dos declaraciones de variable del arriba tendrán significados muy distintos. Si bien la operación es igual en los dos (asignación) al estar en lugares distintos (una dentro de una función y la otra no) el interprete las parseará de forma distinta.
+Por ejemplo, para el intérprete las dos declaraciones de variable del arriba tendrán significados muy distintos. Si bien la operación es igual en los dos (asignación) al estar en lugares distintos (una dentro de una función y la otra no) el intérprete las parseará de forma distinta.
 
 > En otros lenguajes puede que el lexical environment no cambie el comportamiento de la ejecución del código.
 
 ## Execution Context 
 
-El contexto de ejecución contiene información sobre qué código se está ejecutando en cada momento. Además de mantener el código que tiene que ejecutar, también mantiene más información sobre de donde se invocó ese código, en qué lexical enviroment está, etc...
+El contexto de ejecución contiene información sobre *qué* código se está ejecutando en cada momento. Además de mantener el código que tiene que ejecutar, también mantiene más información sobre desde dónde se invocó ese código, en qué lexical enviroment está, etc...
 
 ### Global Enviroment 
 
-Cada vez que ejecutamos algo en JavaScript se corre dentro de un contexto de ejecución. Como todo el código corre en un contexto, si no especificamos ese contexto (veremos cómo se hace despues) entonces el código se va a ejecutar en el __contexto global__, que es el contexto de base que nos crea automáticamente el interprete.
+Cada vez que ejecutamos algo en JavaScript **se corre dentro de un contexto de ejecución**. Como todo el código corre en un contexto, si no especificamos ese contexto (veremos cómo se hace despues) entonces el código se va a ejecutar en el __contexto global__, que es el contexto de base que nos crea automáticamente el interprete.
 
 > Básicamente, vamos a decir que es __global__ cualquier bloque de código que no esté declarado dentro de una función.
 
-Además de ejecutar el código que le pasemos, también crea un __objeto global__ y además crea una variable llamada __this__. Por ejemplo, si usamos el engine de javaScript de Chrome ( este es el interprete ), y vamos a la consola vamos a ver que el _objeto global_ que mencionamos el es objeto `window` y que la variable `this` hace referencia a ese objeto. Esos objetos los generó el interprete cuando creó el ambiente de ejecución. Si abro otra pestaña voy a tener otro objeto `window` similar, ya que es otro contexto de ejecución. 
+Además de ejecutar el código que le pasemos, también crea un __objeto global__ y además crea una variable llamada __this__. Por ejemplo, si usamos el engine de javaScript de Chrome ( este es el intérprete ), y vamos a la consola vamos a ver que el _objeto global_ que mencionamos el es objeto `window` y que la variable `this` hace referencia a ese objeto. Esos objetos los generó el interprete cuando creó el ambiente de ejecución. Si abro otra pestaña voy a tener otro objeto `window` similar, ya que es otro contexto de ejecución.
 
 ![Context](./img/context.jpg)
 
 > Si corremos JavaScript en otro ambiente que no sea el browser, por ejemplo con NodeJs o con otros engines, es muy probable que el objeto global no sea `window` y sea otro. Pero siempre hay UN objeto global.
 
-En JavaScript, cuando declaramos variables y funciones en el ambiente global, estos se guardan en el objeto global. Si declaramos variables y funciones en la consola de desarrollador, vamos a ver que estás aparecerán dentro de `window` que es el objeto global.
+En JavaScript, cuando declaramos variables y funciones en el conexto global, estos se guardan en el objeto global. Si declaramos variables y funciones en la consola de desarrollador, vamos a ver que estás aparecerán dentro de `window` que es el objeto global.
 
 ![Objeto Global](./img/globalObject.png)
 
@@ -66,7 +77,7 @@ Por último, el contexto de ejecución tambien mantiene una referencia a otros c
 
 ![Execution Context](./img/executionContext.png)
 
-### Creando el contexto de ejecución
+### Creando el contexto de ejecución / Hoisting
 
 Veamos como el intérprete crea el contexto de ejecución global. Cuando el interprete lee un bloque de código realiza un proceso llamado `hoisting`. Básicamente lee todo el código buscando declaraciones de variables y funciones, y reserva un espacio en memoria para ellas.
 
@@ -82,37 +93,38 @@ function bar() {
 }
 ```
 
-En otros lenguajes, si intentaramos invocar una función o una variable que está definida _'más abajo'_ seguramente tendríamos un error. Pero JavaScript, como realiza el `hoisting`, ya tiene reservado el espacio para esas variable y funciones, por lo tanto no se genera un error. Notesé que a la función la pudo ejecutar, esto quiere decir que durante el hoisting guardó su contenido también, no sólo reservó el espacio. Pero con el caso de la variable, sólo reservo el espacio, ya que cuando hacemos el `console.log` vemos que contiene undefined.
+En otros lenguajes, si intentaramos invocar una función o una variable que está definida _'más abajo'_ seguramente tendríamos un error. Pero JavaScript, al realizar el proceso de `hoisting`, ya tiene reservado el espacio para esas variable y funciones, por lo tanto no se genera un error. Notesé que a la función la pudo ejecutar, esto quiere decir que durante el hoisting guardó su contenido también, no sólo reservó el espacio. Pero con el caso de la variable, sólo reservo el espacio, ya que cuando hacemos el `console.log` vemos que contiene `undefined`.
 
 > Podemos pensar el Hoisting como que el interprete '_mueve_' las declaraciones a la parte de már arriba de nuestro código. Sólo lo hace con las declaraciones y no con las inicializaciones.
 
-Para entender porqué el interprete hace esto, tenemos que saber cómo se crea el contexto de ejecución. Esto se hace en dos fases. La primera es la fase de creación (creation phase). En esta fase el interprete genera el _objeto global_, asigna la variable _this_ y las referencias a otro contexto de ejecución (Outer Context), y además reserva el espacio para todas las variables y funciones que vaya a utilizar ese contexto, justamente en este último paso es donde se genera el proceso de `hoisting`. 
+Para entender por qué el interprete hace esto, tenemos que saber cómo se crea el contexto de ejecución. Esto se hace en dos fases. La primera es la fase de creación (creation phase). En esta fase el interprete genera el _objeto global_, asigna la variable _this_ y las referencias a otro contexto de ejecución (Outer Context), y además reserva el espacio para todas las variables y funciones que vaya a utilizar ese contexto, justamente en este último paso es donde se genera el proceso de `hoisting`. 
 
 ![Fase Creacion](./img/fasecreacion.png)
 
 > El hosting es el primer ejemplo de las _cosas extras_ que hace el interprete sin que nosotros se lo pidamos. Si no las conocemos, nos puede pasar que veamos comportamientos extraños y no sepamos de donde vienen (como que podamos usar funciones que no hemos declarado antes de invocarlas!!)
 
-La segunda fase es la _fase de ejecucción_, en esta fase, ya tenemos todo lo que se creo en la primera fase, y ahora sí el intérprete __ejecuta__ nuestro código, línea por línea!. 
+La segunda fase es la _fase de ejecucción_, en esta fase, ya tenemos todo lo que se creo en la primera fase, y ahora sí el intérprete __ejecuta__ nuestro código, línea por línea!.
 
 Este proceso de crear contextos de ejecución sucede siempre al principio cuando se crea el contexto global, ahora vamos a ver que también sucede cada vez que invocamos una función en nuestro código, como se pueden imaginar, en un script cualquiera, es muy probable que se creen varios contextos de ejecución (muchas invocaciones a funciones), estos contextos se van a ir _apilando_ en la __pila de ejecución o execution stack__.
 
 ## Execution stack
 
- Para ilustar como se van creando y cómo se apilan los contextos veamos el siguiente código:
+Para ilustar cómo se van creando y cómo se apilan los contextos veamos el siguiente código:
 
- ```javascript
- function b() {
- 	console.log('B!')
- };
+```javascript
+function b() {
+  console.log('B!')
+};
 
- function a() {
- 	// invoca a la función b
- 	b();
- }
+function a() {
+  // invoca a la función b
+  b();
+};
 
 //invocamos a
- a();
- ```
+a();
+```
+
 Veamos que ocurre cuando corremos este script: Como sabemos, lo primero que pasa es la creción del contexto global y el proceso de _hoisting_, entonces la función `a` y `b` van a estar en memoria. Una vez que termina eso, empieza la fase de ejecución, en esa fase es que el interprete va a recorrer línea por línea el script. En nuestro ejemplo hay una única línea para ejecutar (las otras las leyó durante el _hoisting_) que es la línea donde invocamos a `a()`.
 
 Lo que sucede ahora, es que se crea un _nuevo contexto de ejecución_ que se va a poner arriba del contexto de ejecución global (creando la pila). Básicamente, el contexto que esté arriba de la pila, es el que se está ejecutando en ese momento ( o cuando le den tiempo de procesador a JavaScript). Cuando se creó ese contexto nuevo, pasó lo mismo que cuando creamos el global, el intérprete generó la variable `this` y pusó las referencias al `outer context` (en este caso el outer context es el contexto global), después de hacer todo eso, el intérprete va a ejecutar línea por línea el código del nuevo contexto, es decir, _el código de la función `a`. Ahora, dentro de `a` hay una sóla línea de código, y en esa línea se invoca a `b`. Si! como se imaginan, el intérprete va a crear un _nuevo_ contexto de ejecución para la función `b` (haciendo de nuevo los pasos previamente mencionados), y poniendolo en la cima de la pila.
@@ -132,17 +144,17 @@ Veamos en el código siguiente el comportamiento de las variables:
 var global = 'Hola!';
 
 function a() {
-	// como no hay una variable llamada global en este contexto,
-	// busca en el outer que es el global
-	console.log(global); 
-	global = 'Hello!'; // cambia la variable del contexto global
+  // como no hay una variable llamada global en este contexto,
+  // busca en el outer que es el global
+  console.log(global); 
+  global = 'Hello!'; // cambia la variable del contexto global
 }
 
 function b(){
-	// declaramos una variable global en nuestro contexto
-	// esta es independiente 
-	var global = 'Chao'; 
-	console.log(global);
+  // declaramos una variable global en nuestro contexto
+  // esta es independiente 
+  var global = 'Chao'; 
+  console.log(global);
 }
 
 a(); // 'Hola!'
@@ -150,7 +162,7 @@ b(); // 'Chao'
 console.log(global); // 'Hello'
 ```
 
-Para esto vamos a introducir el término `scope`, este es el set de variable, objeto y funciones al que tenemos acceso en determinado contexto. En el ejemplo anterior, la variable `global` está definida en dos `scopes` distintos, uno es el `scope global` y el otro es el `scope` de la función `b`, esto quiere decir que, a pesar de tenrer el mismo nombre, estas dos variables son distintas.
+Para esto vamos a introducir el término `scope`, este es **el set de variable, objeto y funciones al que tenemos acceso en determinado contexto**. En el ejemplo anterior, la variable `global` está definida en dos `scopes` distintos, uno es el `scope global` y el otro es el `scope` de la función `b`, esto quiere decir que, a pesar de tener el mismo nombre, estas dos variables son distintas.
 
 Justamente, cuando JavaScript no encuentra una variable en su scope, lo que hace es buscar en otros scopes (de contextos que esten en la referencia de `outer contexts`). A esta búsqueda en distintos scope se la conoce como __the scope chain__, ya que el intérprete busca en cadena scope por scope por el nombre de la variable, hasta llegar al scope global. Noten que el `outer enviroment` no es necesariamente el contexto que esté debajo en la pila de ejecucción, ni tampoco el contexto en donde se invocó la función, si no __es el contexto en donde se definió la función!__ (Se acuerdan que dijimos que en javascript el _lexical enviroment_ era importante?).
 
