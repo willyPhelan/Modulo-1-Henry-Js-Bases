@@ -73,10 +73,10 @@ console.log(pm);
 ```
 ### Coerción de Datos
 
-Que crees que va dar estas operaciones:
+¿Qué crees que van dar estas operaciones?:
 
 ```javascript
-6 / "3" 
+6 / "3"
 "2" * "3"
 4 + 5 + "px"
 "$" + 4 + 5
@@ -99,7 +99,7 @@ parseInt("09")
 
 ### Hoisting
 
-Cuál es el output que vemos en consola luego de ejecutar esté código? Explicar porqué es así:
+¿Cuál es el output que vemos en consola luego de ejecutar este código? Explicar porque es así:
 
 ```javascript
 function test() {
@@ -134,7 +134,7 @@ getFood(false);
 
 ### This
 
-Cuál es el output que vemos en consola luego de ejecutar esté código? Explicar porqué es así:
+¿Cuál es el output que vemos en consola luego de ejecutar esté código? Explicar porqué es así:
 
 ```javascript
 var fullname = 'Juan Perez';
@@ -157,7 +157,7 @@ console.log(test());
 
 ### Event loop
 
-Considerando el siguiente código, cuál sería el orden del ouput? Por qué?
+Considerando el siguiente código, ¿Cuál sería el orden del ouput? ¿Por qué?
 
 ```javascript
 function printing() {
