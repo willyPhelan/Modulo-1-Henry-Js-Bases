@@ -34,7 +34,7 @@ function HashTable() {
 }
 
 
-// Do not modify code below this line.
+// No modifiquen nada debajo de esta linea
 // --------------------------------
 
 module.exports = {

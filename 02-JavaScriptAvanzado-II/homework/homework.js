@@ -67,7 +67,7 @@ let textoUnderscore = undefined;
 
 
 
-// Do not modify code below this line.
+// No modifiquen nada debajo de esta linea
 // --------------------------------
 
 module.exports = {

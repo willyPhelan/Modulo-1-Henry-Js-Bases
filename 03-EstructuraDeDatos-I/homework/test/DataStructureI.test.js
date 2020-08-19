@@ -6,7 +6,7 @@ const {
 } = require('../homework');
 
 describe('nFactorial(n)', function() {
-  it('should return the factorial of n', function() {
+  it('debe devolver el factorial de n', function() {
     expect(nFactorial(5)).toBe(120);
     expect(nFactorial(15)).toBe(1307674368000);
   });
@@ -14,7 +14,7 @@ describe('nFactorial(n)', function() {
 
 describe('nFibonacci(n)', function() {
   // 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144,…
-  it('should return the nth fibonacci number', () => {
+  it('debe bevolver el enesimo número de la serie de fibonacci', () => {
     const fib1 = nFibonacci(0);
     const fib2 = nFibonacci(6);
     const fib3 = nFibonacci(9);

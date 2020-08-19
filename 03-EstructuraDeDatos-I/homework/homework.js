@@ -17,14 +17,14 @@ function nFibonacci(n) {
 
 // Implementa la clase Queue
 // enqueue:   Agrega un valor a la queue.   Respeta el orden existente.
-// dequeue:   Remueve un valor de la queue.   Obedece a FIFO y respeta el underflow (cuando la queue tiene size cero, o sea, cuando no tiene ningún elemento).
+// dequeue:   Remueve un valor de la queue.   Obedece a FIFO y respeta el underflow (devuelve undefined cuando la queue tiene size cero, o sea, cuando no tiene ningún elemento).
 // size:   Devuelve el número de elementos que contiene la queue.
 
 function Queue() {
 
 }
 
-// Do not modify code below this line.
+// No modifiquen nada debajo de esta linea
 // --------------------------------
 
 module.exports = {
