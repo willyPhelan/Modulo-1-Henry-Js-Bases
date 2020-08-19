@@ -8,7 +8,7 @@ Para ejecutar los test, anda a esta carpeta y ejecutá:
 
 ## Extra Credit
 
-## OOP - Prototypes 
+## OOP - Prototypes
 
 ### Repeatify
 
@@ -30,7 +30,7 @@ Probá tu solución con el siguiente código:
 > var t = new Triangle(1, 2, 3);
 > t instanceof Triangle
 // true
-> shape.isPrototypeOf(t);
+> Shape.prototype.isPrototypeOf(t);
 // true
 > t.getPerimeter();
 // 6
@@ -43,14 +43,14 @@ Probá tu solución con el siguiente código:
 Probá tu solución con el siguiente código:
 
 ```javascript
-> var t = new Circle(2);
-> t instanceof Circle
+> var c = new Circle(2);
+> c instanceof Circle
 // true
-> shape.isPrototypeOf(t);
+> Shape.prototype.isPrototypeOf(c);
 // true
-> t.getPerimeter();
+> c.getPerimeter();
 // 12.566370614359172
-> t.getType();
+> c.getType();
 // "Circle"
 ```
 
