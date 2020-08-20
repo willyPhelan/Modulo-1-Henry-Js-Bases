@@ -1,5 +1,24 @@
 # Henry
 
+<table width="100%" style='table-layout:fixed;'>
+  <tr>
+    <td>
+      <a href="https://airtable.com/shr5KEX8NFdrG14j9?prefill_clase=02-JavaScriptAvanzado-II">
+      <img src="https://static.thenounproject.com/png/204643-200.png" width="100"/>
+      <br>
+      Hacé click acá para dejar tu feedback sobre esta clase.
+      </a>
+    </td>
+      <td>
+      <a href="https://quizizz.com/join/quiz/5f3e68ff827d1e001b60a9d5/start?from=soloLinkShare&referrer=5ee12dad966f1e001b82c78b">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/HSQuiz.svg/768px-HSQuiz.svg.png" width="100" height="100"/>
+        <br>
+        Hacé click acá completar el quizz teórico de esta lecture.
+      </a>
+  </td>
+  </tr>
+</table>
+
 # Entendiendo JavaScript a Fondo
 
 ## Closures
