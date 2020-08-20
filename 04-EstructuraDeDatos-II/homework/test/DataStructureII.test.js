@@ -1,4 +1,3 @@
- /* eslint-disable no-undef */
 const {
   Node,
   LinkedList,
@@ -89,9 +88,6 @@ describe('Una linked list', function() {
       return nodeValue === 'two';
     })).toBe('two');
   });
-
-  // This spec demonstrates the utility of the previous spec.
-  // If you are passing the last one correctly, this one should already pass!
 
   it('deberia poder buscar por lo tanto no solo strings pero tambien objetos', function() {
     function UserNode(name, email, city) {
