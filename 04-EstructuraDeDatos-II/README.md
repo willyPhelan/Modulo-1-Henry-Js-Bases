@@ -1,5 +1,24 @@
 # Estructuras de Datos II
 
+<table width="100%" style='table-layout:fixed;'>
+  <tr>
+    <td>
+      <a href="https://airtable.com/shr5KEX8NFdrG14j9?prefill_clase=03-EstructuraDeDatos-II">
+      <img src="https://static.thenounproject.com/png/204643-200.png" width="100"/>
+      <br>
+      Hacé click acá para dejar tu feedback sobre esta clase.
+      </a>
+    </td>
+      <td>
+      <a href="https://quizizz.com/join/quiz/5f43b3d02afd82001b22490a/start?from=soloLinkShare&referrer=5ee12dad966f1e001b82c78b">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/HSQuiz.svg/768px-HSQuiz.svg.png" width="100" height="100"/>
+        <br>
+        Hacé click acá completar el quizz teórico de esta lecture.
+      </a>
+  </td>
+  </tr>
+</table>
+
 ## Listas Enlazadas
 
 Básicamente, las listas enlazadas, son una secuencia de nodos enlazados entre ellos y que contienen información. Podemos decir que cada nodo contiene datos y además uno o más links a otros nodos. Según las restricciones que tengan la cantidad de links, estas pueden ser simplemente enlazadas, dobles o múltiples.
