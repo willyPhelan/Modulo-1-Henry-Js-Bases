@@ -3,7 +3,7 @@
 <table width="100%" style='table-layout:fixed;'>
   <tr>
     <td>
-      <a href="https://airtable.com/shr5KEX8NFdrG14j9?prefill_clase=03-EstructuraDeDatos-II">
+      <a href="https://airtable.com/shr5KEX8NFdrG14j9?prefill_clase=04-EstructuraDeDatos-II">
       <img src="https://static.thenounproject.com/png/204643-200.png" width="100"/>
       <br>
       Hacé click acá para dejar tu feedback sobre esta clase.
