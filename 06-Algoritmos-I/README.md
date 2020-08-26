@@ -1,5 +1,24 @@
 # Algoritmos
 
+<table width="100%" style='table-layout:fixed;'>
+  <tr>
+    <td>
+      <a href="https://airtable.com/shr5KEX8NFdrG14j9?prefill_clase=06-Algoritmos-I">
+      <img src="https://static.thenounproject.com/png/204643-200.png" width="100"/>
+      <br>
+      Hacé click acá para dejar tu feedback sobre esta clase.
+      </a>
+    </td>
+      <td>
+      <a href="https://quizizz.com/join/quiz/5f46568e321efe001f0958da/start?from=soloLinkShare&referrer=5f46568e321efe001f0958da">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/HSQuiz.svg/768px-HSQuiz.svg.png" width="100" height="100"/>
+        <br>
+        Hacé click acá completar el quizz teórico de esta lecture.
+      </a>
+  </td>
+  </tr>
+</table>
+
 ## ¿Qué es un algoritmo?
 
 Un algoritmo es un conjunto prescrito de instrucciones o reglas bien definidas, ordenadas y finitas que permite realizar una actividad mediante pasos sucesivos que no generen dudas a quien deba realizar dicha actividad.
