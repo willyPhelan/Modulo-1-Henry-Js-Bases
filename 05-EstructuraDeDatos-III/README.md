@@ -1,5 +1,26 @@
 # Estructuras de Datos III
 
+
+<table width="100%" style='table-layout:fixed;'>
+  <tr>
+    <td>
+      <a href="https://airtable.com/shr5KEX8NFdrG14j9?prefill_clase=05-EstructuraDeDatos-III">
+      <img src="https://static.thenounproject.com/png/204643-200.png" width="100"/>
+      <br>
+      Hacé click acá para dejar tu feedback sobre esta clase.
+      </a>
+    </td>
+      <td>
+      <a href="https://quizizz.com/join/quiz/5f4e3ccd39a104001bc390dc/start?from=soloLinkShare&referrer=5f4e3ccd39a104001bc390dc">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/HSQuiz.svg/768px-HSQuiz.svg.png" width="100" height="100"/>
+        <br>
+        Hacé click acá completar el quizz teórico de esta lecture.
+      </a>
+  </td>
+  </tr>
+</table>
+
+
 ## Arboles (Trees)
 
 Los árboles son estructuras de datos que consiste en una serie de nodos conectados entre ellos y que se asemeja a un árbol (al revés). Cuando hablemos de árboles vamos a usar la siguiente terminología:
