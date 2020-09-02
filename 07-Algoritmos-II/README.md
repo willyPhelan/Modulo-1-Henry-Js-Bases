@@ -1,10 +1,25 @@
 # Algoritmos
 
-# Henry
+<table width="100%" style='table-layout:fixed;'>
+  <tr>
+    <td>
+      <a href="https://airtable.com/shr5KEX8NFdrG14j9?prefill_clase=07-Algoritmos-II">
+      <img src="https://static.thenounproject.com/png/204643-200.png" width="100"/>
+      <br>
+      Hacé click acá para dejar tu feedback sobre esta clase.
+      </a>
+    </td>
+      <td>
+      <a href="https://quizizz.com/join/quiz/5f4f8bfa20aff2001ba3601d/start?from=soloLinkShare&referrer=5f4f8bfa20aff2001ba3601d">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/HSQuiz.svg/768px-HSQuiz.svg.png" width="100" height="100"/>
+        <br>
+        Hacé click acá completar el quizz teórico de esta lecture.
+      </a>
+  </td>
+  </tr>
+</table>
 
-## Algoritmos II
-
-### QuickSort
+## QuickSort
 
 Ahora vamos a ver un algoritmo mucho más rápido, también es un poco más complejo. QuickSort está diseñado utilizando la Técnica __[Divide and Conquer](https://es.wikipedia.org/wiki/Algoritmo_divide_y_vencer%C3%A1s)__ que consiste en dividir un problema en subproblemas más pequeños, luego encontrar la solución de los problemas pequeños y combinarlas para encontrar la solución mayor.
 Además _QuickSort_ es recursivo, o sea que se llama a sí mismo. Básicamente el algoritmo es así:
