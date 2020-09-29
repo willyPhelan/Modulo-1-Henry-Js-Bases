@@ -13,13 +13,21 @@
 - [Algoritmos I](./06-Algoritmos-I)
 - [Algoritmos II](./07-Algoritmos-II)
 
-Extra:
+## Proceso de subida de homeworks
+
+__IMPORTANTE:__ Luego de completar cada una de las homeworks del día deberán ejecutar el siguiente comando para subir sus trabajos a sus repositorios (Deben estar posicionados sobre la carpeta `homework` para que funcione y haber corrido previamente `npm install`):
+
+```bash
+  node submit.js
+```
+
+### Extra:
 
  * [Patrones de JavaScript](https://addyosmani.com/resources/essentialjsdesignpatterns/book/)
  * [Manejo de errores](./01-JavaScriptAvanzado-I/errores.md)
  * [JS orientado a Objetos](./01-JavaScriptAvanzado-I/OOP.md)
 
-## Links copados
+### Links copados
 
 > [En esta página Dmitry Soshnikov](http://dmitrysoshnikov.com/ecmascript/javascript-the-core/#this-value) explica muy a fondo varios conceptos del lenguaje, casi a nivel de la especificación técnica.
 - __Streams y pipes__: [substack](https://github.com/substack/stream-handbook)
