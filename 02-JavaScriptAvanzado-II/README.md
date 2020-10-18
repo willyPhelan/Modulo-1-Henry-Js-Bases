@@ -108,14 +108,12 @@ Veamos el siguiente código, primero definimos una función que va retornar otra
 
 ```javascript
 function hacerSaludo( lenguaje ){
-  if ( lenguaje === 'en'){
-    return function(){
+  return function(){
+    if ( lenguaje === 'en'){
       console.log('Hi!');
     }
-  }
 
-  if ( lenguaje === 'es'){
-    return function(){
+    if ( lenguaje === 'es'){
       console.log('Hola!');
     }
   }
