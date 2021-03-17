@@ -9,11 +9,11 @@ function counter() {
 }
 
 function cacheFunction(cb) {
-  // Usa closures para crear un cache para la funcion cb.
-  // la funcion que retornas debe aceptar un solo argumento e invocar a cb con ese argumento
-  // cuando la funcion que hayas retornado es invocada de nuevo, deberia guardar el argumento y el resultado de la invocacion
-  // cuando la funcion que retornaste sea invocada de nuevo con un argumento con el cual se habia invocado anterioremente, no deberia invocar de nuevo a cb
-  // deberia retornar el resultado (previamente guardado)
+  // Usa closures para crear un caché para la función cb.
+  // la función que retornas debe aceptar un solo argumento e invocar a cb con ese argumento
+  // cuando la función que hayas retornado es invocada de nuevo, debería guardar el argumento y el resultado de la invocacion
+  // cuando la función que retornaste sea invocada de nuevo con un argumento con el cual se había invocado anterioremente, no deberia invocar de nuevo a cb
+  // debería retornar el resultado (previamente guardado)
   // Ejemplo:
   // cb -> function(x) { return x * x; }
   // si invocas la function que retornaste con 5, adentro deberia invocar cb(5) y retornar 25.
@@ -37,14 +37,15 @@ var alumno = {
 function getNombre(){
   return this.nombre;
 }
- // Escribir código sin modificar lo que ya se encuentra escrito arriba para poder llamar al método getNombre primero para obtener el nombre del instructor y luego para obtener el nombre del alumno.
+ // Escribir código, sin modificar lo que ya se encuentra escrito arriba, para poder llamar al método getNombre para obtener primero el nombre del instructor y luego para obtener el nombre del alumno.
 // Modificar los undefined por el código correspondiente en cada caso
 // Pista, tenes que bindear el this!
 getNombreInstructor = undefined;
 getNombreAlumno = undefined;
 
 
-/*Guardar en las siguientes tres variables una función que devuelva una cadena utilizando la función "crearCadena" y el delimitador especificado. La idea es realizarlo con la función bind para poder volver a utilizarlo múltiples veces luego:
+/*Guardar en las siguientes tres variables una función que devuelva una cadena utilizando la función "crearCadena"
+y el delimitador especificado. La idea es realizarlo con la función bind para poder volver a utilizarlo múltiples veces luego:
 
 1. textoAsteriscos
 2. textoGuiones
@@ -57,7 +58,7 @@ function crearCadena(delimitadorIzquierda, delimitadorDerecha, cadena){
 }
 
 // Modificar los undefined por el código correspondiente en cada caso
-// Pista, tenes que usar bind para "bindear" algunos parámetros de la funcion crearCadena.
+// Pista, tenes que usar bind para "bindear" algunos parámetros de la función crearCadena.
 
 let textoAsteriscos = undefined;
 

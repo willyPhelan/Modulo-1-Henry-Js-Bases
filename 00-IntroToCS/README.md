@@ -13,7 +13,7 @@
 
 ## Numeros Binarios
 
-Escribir una función que convierta lo números binarios a números decimal.
+Escribir una función que convierta números binarios a números decimales.
 
 Ej:
 
@@ -22,7 +22,7 @@ BinarioADecimal('10')  // 2
 BinarioADecimal('111') // 7
 ```
 
-Escribir una función que convierta lo números decimal a números binarios.
+Escribir una función que convierta números decimales a números binarios.
 
 Ej:
 

@@ -7,7 +7,7 @@
 
 Determiná que será impreso en la consola, sin ejecutar el código.
 
-> Investiguen cual es la diferencia entre declarar una variable con `var` y directamente asignarle un valor.
+> Investiga cuál es la diferencia entre declarar una variable con `var` y directamente asignarle un valor.
 
 ```javascript
 x = 1;
@@ -73,7 +73,7 @@ console.log(pm);
 ```
 ### Coerción de Datos
 
-¿Qué crees que van dar estas operaciones?:
+¿Cuál crees que será el resultado de la ejecución de estas operaciones?:
 
 ```javascript
 6 / "3"
@@ -99,7 +99,7 @@ parseInt("09")
 
 ### Hoisting
 
-¿Cuál es el output que vemos en consola luego de ejecutar este código? Explicar porque es así:
+¿Cuál es el output o salida en consola luego de ejecutar este código? Explicar por qué:
 
 ```javascript
 function test() {
@@ -115,7 +115,7 @@ function test() {
 test();
 ```
 
-Y el de este:
+Y el de este código? :
 
 ```javascript
 var snack = 'Meow Mix';
@@ -134,7 +134,7 @@ getFood(false);
 
 ### This
 
-¿Cuál es el output que vemos en consola luego de ejecutar esté código? Explicar porqué es así:
+¿Cuál es el output o salida en consola luego de ejecutar esté código? Explicar por qué:
 
 ```javascript
 var fullname = 'Juan Perez';
@@ -157,7 +157,7 @@ console.log(test());
 
 ### Event loop
 
-Considerando el siguiente código, ¿Cuál sería el orden del ouput? ¿Por qué?
+Considerando el siguiente código, ¿Cuál sería el orden en el que se muestra por consola? ¿Por qué?
 
 ```javascript
 function printing() {

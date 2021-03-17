@@ -17,15 +17,17 @@ function Node(value){
 
 }
 
-// Hash Table
-// Una hash table contiene un arreglo de "contenedores" donde puede guardar información.
-// Para guardar un valor asociado a una key (string):
-//    - Correr la key a través de una función hash para transformarla a un número entero.
-//    - Usar ese número como índice para ver en cuál contenedor guardarás el valor.
+// Hash Table( ver información en: https://es.wikipedia.org/wiki/Tabla_hash)
+// Una Hash table contiene un arreglo de "contenedores" o buckets donde puede guardar información.
+// Para este ejercicio, generar 35 buckets para la Hash Table, y realizar los métodos, get, hasKey
+// Para almacenar un valor asociado a una key (string):
+//    - Se pasa ese valor a la función hash(Pista: usar la función charCodeAt), que determina la posición en que debe ir en el arreglo. 
+//    - Luego el elemento se inserta(llamando al método set) en la posición(índice) devuelta. 
 // Para buscar el valor por su key:
-//    - Correr la key por la función hash para conseguir el número.
-//    - Usar el número para buscar el contenedor donde está el valor.
-//    - Devolver el valor.
+//    - Sólo habrá que pasarle a la función hash la clave del elemento a buscar y ésta determinará la posición 
+//      en que se encuentra.
+//    - Usar el número obtenido, para buscar(llamando al método get) el contenedor o bucket donde está el valor.
+//    - Retornar dicho valor.
 
 function HashTable() {
 

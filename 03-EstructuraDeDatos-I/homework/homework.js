@@ -1,4 +1,4 @@
-// resolve estos ejercicios usando recursión
+// Resolvé estos ejercicios usando recursión
 
 function nFactorial(n) {
   // devolvé el factorial de n (n!)
