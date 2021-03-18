@@ -24,21 +24,39 @@ describe('counter', () => {
    expect(counterFunction()).toBe(4);
    expect(counterFunction()).toBe(5);
  });
+ it('should have two diferent acumulators if two counters are created', () => {
+   const counterOne = counter();
+   const counterTwo = counter();
+   expect(counterOne()).toBe(1);
+   expect(counterOne()).toBe(2);
+   expect(counterOne()).toBe(3);
+   expect(counterOne()).toBe(4);
+   expect(counterTwo()).toBe(1);
+   expect(counterTwo()).toBe(2);
+ });
 });
 
 describe('cacheFunction(cb)', function() {
+ const cb = function(x) {
+   return x * 2;
+ };
  it('should return the callback function', function() {
-   const cb = function() {};
    expect(typeof cacheFunction(cb)).toEqual('function');
  });
  it('should return the callback functions result when the cached function is invoked', function() {
-   const cb = function(x) {
-     return x * 2;
-   };
    const cachedFunction = cacheFunction(cb);
    expect(cachedFunction(5)).toBe(10);
  });
  it('should cache function results', function() {
+  const cachedFunction = cacheFunction(cb);
+  var resultOne = cachedFunction(2);
+  expect(resultOne).toBe(4);
+  var resultTwo = cachedFunction(3);
+  expect(resultTwo).toBe(6);
+  var resultTwo = cachedFunction(2);
+  expect(resultTwo).toBe(4);
+});
+ it('should avoid calling cb function when not necessary', function() {
    const cb = jest.fn();
    const cachedFunction = cacheFunction(cb);
    cachedFunction(true);
