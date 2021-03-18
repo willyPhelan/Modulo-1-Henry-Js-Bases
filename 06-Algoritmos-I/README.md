@@ -10,7 +10,7 @@
       </a>
     </td>
       <td>
-      <a href="https://quizizz.com/join/quiz/5f46568e321efe001f0958da/start?from=soloLinkShare&referrer=5f46568e321efe001f0958da">
+      <a href="https://quiz.soyhenry.com/evaluation/new/6053bc3f656c8d23c2e60e16">
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/HSQuiz.svg/768px-HSQuiz.svg.png" width="100" height="100"/>
         <br>
         Hacé click acá completar el quizz teórico de esta lecture.
