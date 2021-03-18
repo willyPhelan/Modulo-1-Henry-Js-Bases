@@ -1,4 +1,6 @@
-// Resolvé estos ejercicios usando recursión
+// Las funciones nFactoria y nFibonacci deben resolverlas
+// usando recursión. Una vez realizadas de esa forma pueden probar hacerlas
+// de forma iterativa pero esto último no es obligatorio.
 
 function nFactorial(n) {
   // devolvé el factorial de n (n!)
@@ -15,10 +17,11 @@ function nFibonacci(n) {
 
 }
 
-// Implementa la clase Queue
-// enqueue:   Agrega un valor a la queue.   Respeta el orden existente.
-// dequeue:   Remueve un valor de la queue.   Obedece a FIFO y respeta el underflow (devuelve undefined cuando la queue tiene size cero, o sea, cuando no tiene ningún elemento).
-// size:   Devuelve el número de elementos que contiene la queue.
+// Para esta parte no es necesario utilizar recursión.
+// Implementa la clase Queue que debe contener los siguientes métodos:
+// enqueue: Agrega un valor a la queue. Respeta el orden existente.
+// dequeue: Remueve un valor de la queue. Obedece a FIFO y respeta el underflow (devuelve undefined cuando la queue tiene size cero, o sea, cuando no tiene ningún elemento).
+// size: Devuelve el número de elementos que contiene la queue.
 
 function Queue() {
 
