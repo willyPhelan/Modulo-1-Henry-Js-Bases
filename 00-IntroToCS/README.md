@@ -67,8 +67,8 @@ A | B | XOR
 --| --| --
 1 | 1 |  0
 1 | 0 |  1
-0 | 0 |  1
-0 | 1 |  0
+0 | 0 |  0
+0 | 1 |  1
 
 A | NOT
 --| --
@@ -79,7 +79,7 @@ A | NOT
 ## Half Adder
 En función de las compuertas o puertas lógicas y a través de la combinación de estas podemos lograr diversas operaciones, por ejemplo un sumador de números.
 En la escuela nos enseñaron a sumar con números decimales pero, las computadoras en su interior trabajan con un sistema binario, es decir 1 y 0s.
-Por ejemplo, si quisiéramos sumar 19+24 sabemos que la suma de 9+4 = 13, por lo tanto en el resultado final en la unidad nos queda un 3 y debemos “llevarnos” la centena. Luego, para la centena debemos sumar 1 + 2 + 1 = 4. Obteniendo como resultado final 43
+Por ejemplo, si quisiéramos sumar 19+24 sabemos que la suma de 9+4 = 13, por lo tanto en el resultado final en la unidad nos queda un 3 y debemos “llevarnos” la decena. Luego, para la decena debemos sumar 1 + 2 + 1 = 4. Obteniendo como resultado final 43.
 En el Half Adder, ese rol de acarreo lo hace la puerta lógica AND mientras que el XOR efectúa la suma. Si quisiéramos trasladar el mismo ejemplo ya mencionado, en primer lugar debemos conocer cual es el valor de 19 y 24 en binario. Más adelante veremos cómo hacer dicha transformación, pero por ahora, confíen que 19 = 10011 y 24 = 11000.
 
 1 | 0   | 0     | 1   | 1
@@ -126,7 +126,7 @@ Se completa con 0s. Por lo tanto, resta resolver 1 AND 0 = 0, NO hay acarreo. 1 
 101011 = 43
 
 ## Sistemas de Numeración
-### Sistema Urinario:
+### Sistema Unario:
 Es el sistema de numeración más simple, posee un único símbolo para representar todos los números existentes. Supongamos que el símbolo elegido sea “I”, si quisiéramos representar el número 3 del sistema decimal, lo haríamos de la siguiente manera: “III”. Su principal desventaja es que no nos permite simbolizar de forma cómoda y rápida un conjunto con muchos elementos.
 
 ### Números Romanos:
