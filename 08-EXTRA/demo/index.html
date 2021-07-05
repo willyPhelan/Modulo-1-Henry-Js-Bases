@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo</title>
+</head>
+<body>
+    <script>
+
+        var obj = {
+            fullname: 'Natalia Nerea',
+            prop: {
+                fullname: 'Aurelio De Rosa',
+                getFullname: function() {
+                    return this.fullname;
+                }
+            }
+        };
+        var test;
+        function saludar( saludo, obj ){
+            test = obj.prop.getFullname()
+            return function( nombre, test ){
+                alert(saludo + ' ' + nombre);
+                console.log(test)
+            }
+        }
+
+        var saludarHola = saludar('Hola', obj); 
+
+        saludarHola('Toni', test); 
+
+    </script>
+</body>
+</html>
