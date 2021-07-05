@@ -44,7 +44,7 @@ Pueden ver una explicación más detallada sobre este punto acá: https://develo
 6) <b>Activate/Deactivate:</b> Este botón no mueve la ejecución. Solo prende y apaga los breakpoints.
 7) <b>Pause/Don't pause on exceptions:</b> con esta opción le indicamos al debugger si queremos que pause la ejecución en casos de excepción o no. Por ejemplo, si tenemos un error en el código y es por este motivo que se frena la ejecución, queremos que lo detecte. En este caso, se va a frenar la ejecución no por un breakpoint sino por un error extra que no habíamos tenido en cuenta así podremos examinar el estado de nuestras variables al momento que rompe y corregirlo.
 
-Podés probar vos mismo/a como funciona el debugger con una demo de Google acá: https://googlechrome.github.io/devtools-samples/debug-js/get-started
+Podés probar vos mismo/a como funciona el debugger con una demo de Google acá: https://googlechrome.github.io/devtools-samples/debug-js/get-started </br>
 La explicación de la demo la encontras acá: https://developer.chrome.com/docs/devtools/javascript/
 
 Además, en este mismo módulo vas a encontrar una carpeta `demo` que contiene un ejercicio para que descubras más funcionalidades del debugger. Acá te dejamos una muestra del código: 
