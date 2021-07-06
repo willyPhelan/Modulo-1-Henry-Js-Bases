@@ -379,7 +379,7 @@ Si tuvieramos una compu es capaz de ejecutar 1.000.000 instrucciones por segundo
 
 Sorprendente, no? Miren [esto](https://es.wikipedia.org/wiki/Torres_de_Han%C3%B3i#Historia)
 
-Ahora pensemos el problema al reves. Qué cantidad de datos podría cada algoritmo en un segundo?:
+Ahora pensemos el problema al reves. ¿Qué cantidad de datos podría cada algoritmo en un segundo?:
 
 ![tablaSegundo](./img/tablasegundo.png)
 
