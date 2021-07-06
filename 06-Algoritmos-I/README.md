@@ -119,7 +119,7 @@ De hecho estas dos condiciones a veces van en contra: encontrar la solución per
 
 ### ¿Cómo medimos la eficienta del un algoritmo?
 
-Lo más fácil y rápido de hacer es contar cuanto tiempo le lleva al algoritmo encontrar la respuesta que buscamos. Pero eso nos direia la eficiencia de ese algoritmo sólamente para la computadora que corrió , con los datos que tenia y en el lenguaje que se haya implementado, no?
+Lo más fácil y rápido de hacer es contar cuanto tiempo le lleva al algoritmo encontrar la respuesta que buscamos. Pero eso nos diría la eficiencia de ese algoritmo sólamente para la computadora que corrió , con los datos que tenia y en el lenguaje que se haya implementado, no?
 Entonces... como hacemos para _comparar_ la eficiencia de distintos algoritmos?
 Para eso se hace un análisis conocido como `Asymptotic Analysis`, vamos a entender el concepto con un juego.
 
