@@ -254,13 +254,13 @@ Máximo y Mínimo:
 
 ```javascript
 var max = array[0];
-for( var i = 0, i <= array.lenght; i++){
+for( var i = 0; i <= array.lenght; i++){
 	if( array[i] > max)	{
 		max = array[i];
 	}
 }
 var min = array[0];
-for( var i = 0, i <= array.lenght; i++){
+for( var i = 0; i <= array.lenght; i++){
 	if( array[i] < max)	{
 		min = array[i];
 	}
@@ -275,7 +275,7 @@ Mejorando un algoritmo:
 ```javascript
 var max = array[0];
 var min = array[0];
-for( var i = 0, i <= array.lenght; i++){
+for( var i = 0; i <= array.lenght; i++){
 	if( array[i] > max)	{
 		max = array[i];
 	}
@@ -291,8 +291,8 @@ console.log(min);
 Buscar elementos iguales en un arreglo:
 
 ```javascript
-for( var i = 0, i <= array.lenght; i++){
-	for( var j = 0, j <= array.lenght; j++){
+for( var i = 0; i <= array.lenght; i++){
+	for( var j = 0; j <= array.lenght; j++){
 	  if(array[i] === array[j]){
 	  	return true;
 	  }
