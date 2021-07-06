@@ -241,13 +241,13 @@ Encontrar un máximo en un arreglo:
 
 ```javascript
 var max = array[0];
-for( var i = 0, i <= array.lenght; i++){
+for( var i = 0; i <= array.lenght; i++){
 	if( array[i] > max)	{
 		max = array[i];
 	}
 }
 console.log(max);
-}; // O ( N ) 
+// O ( N ) 
 ```
 
 Máximo y Mínimo:
