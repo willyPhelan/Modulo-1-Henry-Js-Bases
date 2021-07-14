@@ -119,7 +119,7 @@ De hecho estas dos condiciones a veces van en contra: encontrar la solución per
 
 ### ¿Cómo medimos la eficienta del un algoritmo?
 
-Lo más fácil y rápido de hacer es contar cuanto tiempo le lleva al algoritmo encontrar la respuesta que buscamos. Pero eso nos direia la eficiencia de ese algoritmo sólamente para la computadora que corrió , con los datos que tenia y en el lenguaje que se haya implementado, no?
+Lo más fácil y rápido de hacer es contar cuanto tiempo le lleva al algoritmo encontrar la respuesta que buscamos. Pero eso nos diría la eficiencia de ese algoritmo sólamente para la computadora que corrió , con los datos que tenia y en el lenguaje que se haya implementado, no?
 Entonces... como hacemos para _comparar_ la eficiencia de distintos algoritmos?
 Para eso se hace un análisis conocido como `Asymptotic Analysis`, vamos a entender el concepto con un juego.
 
@@ -241,26 +241,26 @@ Encontrar un máximo en un arreglo:
 
 ```javascript
 var max = array[0];
-for( var i = 0, i <= array.lenght; i++){
+for( var i = 0; i <= array.lenght; i++){
 	if( array[i] > max)	{
 		max = array[i];
 	}
 }
 console.log(max);
-}; // O ( N ) 
+// O ( N ) 
 ```
 
 Máximo y Mínimo:
 
 ```javascript
 var max = array[0];
-for( var i = 0, i <= array.lenght; i++){
+for( var i = 0; i <= array.lenght; i++){
 	if( array[i] > max)	{
 		max = array[i];
 	}
 }
 var min = array[0];
-for( var i = 0, i <= array.lenght; i++){
+for( var i = 0; i <= array.lenght; i++){
 	if( array[i] < max)	{
 		min = array[i];
 	}
@@ -275,7 +275,7 @@ Mejorando un algoritmo:
 ```javascript
 var max = array[0];
 var min = array[0];
-for( var i = 0, i <= array.lenght; i++){
+for( var i = 0; i <= array.lenght; i++){
 	if( array[i] > max)	{
 		max = array[i];
 	}
@@ -291,8 +291,8 @@ console.log(min);
 Buscar elementos iguales en un arreglo:
 
 ```javascript
-for( var i = 0, i <= array.lenght; i++){
-	for( var j = 0, j <= array.lenght; j++){
+for( var i = 0; i <= array.lenght; i++){
+	for( var j = 0; j <= array.lenght; j++){
 	  if(array[i] === array[j]){
 	  	return true;
 	  }
@@ -379,7 +379,7 @@ Si tuvieramos una compu es capaz de ejecutar 1.000.000 instrucciones por segundo
 
 Sorprendente, no? Miren [esto](https://es.wikipedia.org/wiki/Torres_de_Han%C3%B3i#Historia)
 
-Ahora pensemos el problema al reves. Qué cantidad de datos podría cada algoritmo en un segundo?:
+Ahora pensemos el problema al reves. ¿Qué cantidad de datos podría procesar cada algoritmo en un segundo?:
 
 ![tablaSegundo](./img/tablasegundo.png)
 
