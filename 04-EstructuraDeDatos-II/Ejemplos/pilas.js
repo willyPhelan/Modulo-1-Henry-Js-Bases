@@ -1,3 +1,4 @@
+'use strict'
 /* PILAS CON FUNCTION CONSTRUCTOR */
 
 function Pila() {

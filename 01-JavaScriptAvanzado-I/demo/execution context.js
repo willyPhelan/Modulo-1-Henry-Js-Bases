@@ -1,3 +1,5 @@
+'use strict'
+
 var sayHello = 'Hello';
 
 function     person() {

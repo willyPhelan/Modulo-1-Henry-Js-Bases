@@ -1,3 +1,5 @@
+'use strict'
+
 function Pila(){
 	this._arr = [];
 }
@@ -43,7 +45,7 @@ Torre.prototype.init = function(n){
  		var dest = this._t3;
  		var aux = this._t2;
  	}
-    if( disk == 1  ){
+    if(disk == 1  ){
     	// Cuando a la pila de la izquierda le quede sólo un plato
     	// hacemos el último movimiento y terminamos.
         dest.push(source.pop());
@@ -59,7 +61,7 @@ Torre.prototype.init = function(n){
     }
 }
 
-torreHanoi = new Torre();
+let torreHanoi = new Torre();
 torreHanoi.init(29).solve();
 
 // console.log(torreHanoi);

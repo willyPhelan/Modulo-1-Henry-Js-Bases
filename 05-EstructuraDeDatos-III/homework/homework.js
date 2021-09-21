@@ -1,3 +1,4 @@
+'use strict'
 // resolve estos ejercicios usando recursión
 
 // Binary Seach Tree

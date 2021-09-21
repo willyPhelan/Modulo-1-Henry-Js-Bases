@@ -1,4 +1,5 @@
-`strict`
+'use strict'
+
 var abs = Math.abs;
 var max = Math.max;
 var min = Math.min;
@@ -157,9 +158,9 @@ Node.prototype.maxBalanceFactor = function(m){
 Node.prototype.balance = function(anterior, arbol, from){
 	if(!arbol) arbol = this;
 	if(!anterior) anterior = this;
-	thisbf  =	this.balanceFactor();
-	leftbf  = Infinity;
-	rightbf = Infinity;
+	let thisbf  =	this.balanceFactor();
+	let leftbf  = Infinity;
+	let rightbf = Infinity;
 	if(this.isBalanced()) return arbol;
 	if(this.left)	leftbf  =	this.left.balanceFactor();
 	if(this.right)	rightbf =	this.right.balanceFactor();
@@ -213,12 +214,12 @@ Node.prototype.findMax = function(){
 		else return r
 	}else{
 		if(this.left){
-			maxL = this.left.findMax();
+			let maxL = this.left.findMax();
 			return maxL.data  > this.data ?  maxL: this;
 			
 		}
 		if(this.right){
-			maxR = this.right.findMax()
+			let maxR = this.right.findMax()
 			return maxR.data > this.data ? maxR: this
 		}
 	}
@@ -279,7 +280,7 @@ Node.prototype.destroy = function(n, anterior, next){
  // var tree = new Node(87).insert(93).insert(61).insert(80).insert(8).insert(89).insert(22)
 				// .insert(91).insert(60).insert(33);
 
-tree = new Node(87).insert(93).insert(61).insert(80).insert(8).insert(91).insert(60).insert(33).insert(34).insert(35).insert(36);
+let tree = new Node(87).insert(93).insert(61).insert(80).insert(8).insert(91).insert(60).insert(33).insert(34).insert(35).insert(36);
 				//.delete(8).delete(7).delete(6).delete(5).delete(4).delete(3).delete(2).delete(1);
 // console.log('arbol:\n',tree);
 console.log('arbol:\n',tree);

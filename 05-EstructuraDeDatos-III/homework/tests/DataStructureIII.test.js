@@ -1,4 +1,6 @@
- /* eslint-disable no-undef */
+/* eslint-disable no-undef */
+'use strict'
+
 const {
   BinarySearchTree
 } = require('../homework');

@@ -1,3 +1,4 @@
+'use strict'
 // TORRE DE HANOI // 
 
 function Torre(){

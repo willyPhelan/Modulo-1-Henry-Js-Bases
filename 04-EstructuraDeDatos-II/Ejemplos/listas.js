@@ -1,3 +1,5 @@
+'use strict'
+
 /* LISTAS ENLAZDAS */
 
 function Lista(){

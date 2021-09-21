@@ -1,3 +1,4 @@
+'use strict'
 // Implementa la clase LinkedList
 // tiene metodos `add`, `remove`, y `search`
 // add: Agrega un nuevo nodo en el final de la lista

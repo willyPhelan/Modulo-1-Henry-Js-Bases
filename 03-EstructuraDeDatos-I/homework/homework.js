@@ -1,3 +1,4 @@
+'use strict'
 // Las funciones nFactoria y nFibonacci deben resolverlas
 // usando recursión. Una vez realizadas de esa forma pueden probar hacerlas
 // de forma iterativa pero esto último no es obligatorio.

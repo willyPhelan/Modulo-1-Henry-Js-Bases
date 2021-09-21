@@ -1,3 +1,4 @@
+'use strict'
 // No cambies los nombres de las funciones.
 
 function quickSort(array) {

@@ -1,3 +1,4 @@
+'use strict'
 
 function counter() {
   // Retorna una funcion que cuando sea invocada retorne un valor creciente.
@@ -40,8 +41,8 @@ function getNombre(){
  // Escribir código, sin modificar lo que ya se encuentra escrito arriba, para poder llamar al método getNombre para obtener primero el nombre del instructor y luego para obtener el nombre del alumno.
 // Modificar los undefined por el código correspondiente en cada caso
 // Pista, tenes que bindear el this!
-getNombreInstructor = undefined;
-getNombreAlumno = undefined;
+let getNombreInstructor = undefined;
+let getNombreAlumno = undefined;
 
 
 /*Guardar en las siguientes tres variables una función que devuelva una cadena utilizando la función "crearCadena"

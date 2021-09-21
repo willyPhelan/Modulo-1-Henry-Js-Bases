@@ -1,3 +1,5 @@
+'use strict'; 
+
 var N = require('./arbolBinarioBusqueda.js');
 var _ = require('underscore');
 var test = require('tape');
