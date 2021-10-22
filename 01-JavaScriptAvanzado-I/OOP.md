@@ -124,7 +124,7 @@ for(var key in santi){
 }
 ```
 
-Este concepto nos permite realizar algo simililar al  prototipado, pero con ciertas diferencias importantes. Esta forma no es nativa en JavaScript, pero es tan útil que muchos frameworks y librerías la implementan.  Por ejemplo, [underscore.js](http://underscore.org), tiene una implementación. Esta nueva forma es conocida como __extend__, y vamos a explicarla con un ejemplo usando la librería antes mencionada:
+Este concepto nos permite realizar algo simililar al  prototipado, pero con ciertas diferencias importantes. Esta forma no es nativa en JavaScript, pero es tan útil que muchos frameworks y librerías la implementan.  Por ejemplo, [underscore.js](https://underscorejs.org/), tiene una implementación. Esta nueva forma es conocida como __extend__, y vamos a explicarla con un ejemplo usando la librería antes mencionada:
 
 En este ejemplo, tenemos varios objetos que tiene algunas propiedades y/o métodos que nos gustaría reutilizar.
 
