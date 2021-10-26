@@ -198,9 +198,9 @@ function Persona(nombre, apellido){
 	this.nombre = nombre || 'Juan';
 	this.apellido = apellido || 'Perez';
 }
-var toni = new Person('Toni', 'Tralice');
-var santi = new Person('Santi', 'Scanlan');
-var guille = new Person('Guille', 'Aszyn');
+var toni = new Persona('Toni', 'Tralice');
+var santi = new Persona('Santi', 'Scanlan');
+var guille = new Persona('Guille', 'Aszyn');
 ```
 No pierdan de vista, que estamos invocando una función, asi que podemos utilizar adentro __todo__ los que sabemos de funciones.
 
@@ -219,9 +219,9 @@ Persona.prototype.getNombre = function () {
 	return this.nombre + ' ' + this.apellido;
 }
 
-var toni = new Person('Toni', 'Tralice');
-var santi = new Person('Santi', 'Scanlan');
-var guille = new Person('Guille', 'Aszyn');
+var toni = new Persona('Toni', 'Tralice');
+var santi = new Persona('Santi', 'Scanlan');
+var guille = new Persona('Guille', 'Aszyn');
 
 toni.getNombre() // funciona!
 santi.getNombre() // tambien!
