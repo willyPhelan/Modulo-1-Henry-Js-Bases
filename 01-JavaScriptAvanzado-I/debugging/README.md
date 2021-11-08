@@ -8,13 +8,13 @@ no sólo vamos a poder imprimir mensajes en la cosola si no que vamos a poder re
 Para eso tenemos que abrir el inspector en el navegador haciendo click derecho --> <b>Inspeccionar</b> ó con <b>F12</b></br>
 En la pestaña <b>Sources</b> vamos a visualizar 3 secciones o paneles:
 
-![Panels debugger](https://github.com/WanCirone/FT-M1/blob/debugger/08-EXTRA/img/panels.png)
+![Panels debugger](https://github.com/soyHenry/FT-M1/blob/master/01-JavaScriptAvanzado-I/debugging/img/panels.png)
 
 En el primero de ellos vamos a tener las carpetas con archivos que vamos a ejecutar y depurar con la herramienta debugger. En el panel del medio tenemos la vista completa de los archivos con el código y en el tercer panel tenemos los botones de control y los diferentes paneles más pequeños donde vamos a poder distinguir: 
 
 * <b>Breakpoints:</b> son puntos en el código con los cuales le indicamos al debugger donde tiene que hacer pausas durante la ejecución. Mientras se pausa el código, podemos examinar las variables actuales, ejecutar comandos en la consola, entre muchas de otras acciones. Para colocar un breakpoint tenemos que hacer click en el número de linea de código donde queremos que el debugger frene la ejecución. En la siguiente imágen podemos ver que se han colocado BPs en las líneas 29 y 35 y a la derecha en el panel más pequeño nos indica en que líneas están. Desde ahí también podemos activarlos o desactivarlos de a uno. 
 
-![Breakpoints](https://github.com/WanCirone/FT-M1/blob/debugger/08-EXTRA/img/bps.png)
+![Breakpoints](https://github.com/soyHenry/FT-M1/blob/master/01-JavaScriptAvanzado-I/debugging/img/bps.png)
 
 Tambien podemos crear breakpoints condicionales haciendo click derecho sobre el número de linea de código y aclarando que expresión queremos que se evalúe. En estos casos sólos se frenará la ejecución cuando la expresión evalúe en true. 
 
@@ -27,13 +27,13 @@ Esta sentencia funciona de igual manera que los breakpoints, vamos a colocarla e
 
 * <b>Watch:</b> podemos colocar cualquier tipo de expresión válida para javascript y al ejecutar el código esta se resolverá. Para agregarla hacemos click en el botón ➕ que está al desplegar la sección watch. Por ejemplo: si queremos saber el tipo de dato que está guardando una de nuestras variables podemos escribir la expresión --> <code>typeof "nombre de la variable"</code>, dependiendo del momento de la ejecución esto puede ir variando.
 
-![Subpanels](https://github.com/WanCirone/FT-M1/blob/debugger/08-EXTRA/img/subpanels.png)
+![Subpanels](https://github.com/soyHenry/FT-M1/blob/master/01-JavaScriptAvanzado-I/debugging/img/subpanels.png)
 
 * <b>Event listener breakpoints:</b> en esta sección hay una lista de todos los diferentes tipos de eventos como clicks, mouse, animaciones, etc. Podemos colocar un breakpoint en el momento en que se dispara un evento determinado elegiendo desde este listado.
 
 * <b>Barra de control:</b> en esta barra tenemos los botones que necesitamos para recorrer el código mientras la ejecución está pausada por los breakpoints. Veamos que hace cada uno de ellos.
 
-![Botones](https://github.com/WanCirone/FT-M1/blob/debugger/08-EXTRA/img/botones.jpg)
+![Botones](https://github.com/soyHenry/FT-M1/blob/master/01-JavaScriptAvanzado-I/debugging/img/botones.jpg)
 
 1) <b>Pause/Resume:</b> con este botón podemos reanudar la ejecución del script una vez que fue frenada por un breakpoint. La secuencia de comandos continúa ejecutándose hasta que llegue al siguiente breakpoint, si es que lo hay.
 2) <b>Step over:</b> nos permite pasar a la siguiente llamada de función. Es decir, pasa al siguiente llamado de función sin entrar en ella y detenerse en cada una de las líneas de código.
