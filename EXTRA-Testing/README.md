@@ -133,7 +133,7 @@ it('should return 15 if adding 7 and 8', () => {
 
 Si ahora ejecutamos `npm test` (Configurar previamente el package.json como mostramos antes) debería ejecutarse los tests.
 
-![TDD](./images/demo-test.png)
+![Demo Test](./images/demo-test.png)
 
 Si analizamos la estructura del ejemplo anterior usamos algunas palabras que hasta hoy no conociamos, como por ejemplo `it`, `expect` y `toBe`. 
 
@@ -168,6 +168,82 @@ Adicionalmente algunos de estos matchers mencionados arriba se encuentran en la 
 
 ### Running Options
 
+#### describe
+
 Podemos también agrupar tests en "categorías" utilizando la palabra `describe`, por ejemplo siguiendo el ejemplo anterior de la suma podríamos tener casos con numeros enteros, otros con números decimales y otro con inputs inválidos:
 
-![TDD](./images/describe-demo.png)
+![Describe Demo](./images/describe-demo.png)
+
+Es posible armar también subcategorias poniendo describes dentro de otros describes.
+
+#### Skip Tests
+
+En el caso de que algunos tests no queramos que se ejecuten podemos saltearlos de forma individual colocando `xit` en vez de `it` cuando son definidos en el archivo de tests o sino podemos incluso saltear todo un `describe` completo colocando `xdescribe`.
+
+Por ejemplo en el archivo `sum-describe.test.js` de la carpeta demo podríamos modificar alguns tests para que no se ejecuten:
+
+```js
+describe('Decimal numbers', () => {
+  it('should return 8.33 if adding 3.32 and 5.01', () => {
+    expect(sum(3.32, 5.01)).toBe(8.33);
+  });
+  
+  xit('should return 15.82 if adding 7.72 and 8.1', () => {
+    expect(sum(7.72, 8.1)).toBe(15.82);
+  });
+});
+
+xdescribe('Invalid inputs', () => {
+  it('should throw an TypeError if first parameter is not a number', () => {
+    expect(() => sum('Franco', 5)).toThrow(TypeError);
+  });
+  
+  it('should throw an TypeError if second parameter is not a number', () => {
+    expect(() => sum(3, true)).toThrow(TypeError);
+  });
+});
+```
+
+Si observamos ahora la ejecución del comando `npm test sum-describe` veremos que el segundo test del describe de 'Decimal numbers' y todo el describe de 'Invalid inputs' no se van a ejecutar:
+
+![Skip](./images/skip.png)
+
+#### only
+
+Hay casos en los que solamente queremos probar un tests para evitar que la consola se nos llene de código que no nos estaría interesando en ese momento, para esto JEST tien también una opcion `only` para ejecutar únicamente un test de toda la suite de tests. Volviendo al ejemplo anterior, si solo quisieramos ejecutar el test `should throw an TypeError if first parameter is not a number` podríamos colocarle `it.only` (Para probarlos en la demo saquen los `xit` y `xdescribe`).
+
+```js
+...
+
+describe('Invalid inputs', () => {
+  it.only('should throw an TypeError if first parameter is not a number', () => {
+    expect(() => sum('Franco', 5)).toThrow(TypeError);
+  });
+  
+  it('should throw an TypeError if second parameter is not a number', () => {
+    expect(() => sum(3, true)).toThrow(TypeError);
+  });
+});
+```
+
+Ahora al ejecutar `npm test sum-describe` veremos que todo el resto de los tests fueron salteados:
+
+![it only](./images/it-only.png)
+
+Lo mismo se puede aplicar sobre los `describe` para ejecutar únicamente un grupo de tests.
+
+```js
+...
+
+describe.only('Invalid inputs', () => {
+  it('should throw an TypeError if first parameter is not a number', () => {
+    expect(() => sum('Franco', 5)).toThrow(TypeError);
+  });
+  
+  it('should throw an TypeError if second parameter is not a number', () => {
+    expect(() => sum(3, true)).toThrow(TypeError);
+  });
+});
+```
+
+![describe only](./images/describe-only.png)
