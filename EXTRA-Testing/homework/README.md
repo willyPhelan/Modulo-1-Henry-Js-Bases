@@ -315,7 +315,7 @@ ___
 
 Sigamos ahora con una función para simular la compra de uno de los asientos, vamos a tener que especificarle al igual que en `checkSeatStatus` la letra de la fila y el número de columna y deberíamos testear dos posibles casos:
   - Si el asiento está libre debería reservarlo y retornar 'Seat in XX successfully booked'
-  - Si el asiento está libre debería dejarlo como estaba y retornar 'Seat in XX is already booked'
+  - Si el asiento está reservado debería dejarlo como estaba y retornar 'Seat in XX is already booked'
 Donde XX es la posición del asiento representada por fila y columna como veníamos hablando.
 Mantengamos el orden de los describe y agrupemos estos dos nuevos tests en otro describe.
 
