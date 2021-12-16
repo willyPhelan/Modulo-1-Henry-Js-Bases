@@ -4,7 +4,7 @@
   font-size: 16px;
   line-height: 18px;
   text-align: justify;
-  padding: 2rem 2rem 4rem 80px;
+  padding: 0 2rem 4rem 300px;
   font-size: 1.1em;
   width: 100%;
   max-width: 98vw;
@@ -77,6 +77,14 @@
   margin-bottom: 1rem;
 }
 
+.lesson h2#homework {
+  display: inline-block;
+  font-family: 'Avenir-Black';
+  font-size: 48px;
+  line-height: 66px;
+  color: #1fa32a;
+}
+
 .lesson h3 {
   font-family: 'Avenir-Black';
   font-weight: 900;
@@ -115,6 +123,10 @@
 .lesson img[alt~='logo'] {
   box-shadow: none;
   width: 350px;
+}
+
+.lesson img[alt~='no-box'] {
+  box-shadow: none;
 }
 
 .lesson ul {
