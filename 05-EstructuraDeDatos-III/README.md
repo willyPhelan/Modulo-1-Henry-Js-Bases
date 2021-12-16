@@ -126,3 +126,7 @@ Les dejo una tablita con ventajas y desventajas de las estructuras que hemos vis
 | Árbol 2-3-4 | Muy bueno para guardar datos  |   Es Complejo |
 | Hash | Muy rápido si conocemos el key. Insercion rapida | Borrado lento, buscado lento, consume mucha memoria    |
 | Heap | Rápida inserción, borrado y acceso al item mas grande |  Acceso lento a los demás items |
+
+## Homework
+
+Completa la tarea descrita en el archivo [README](https://github.com/soyHenry/FT-M1/blob/master/05-EstructuraDeDatos-III/homework/README.md)

@@ -560,3 +560,7 @@ A veces es necesario acceder al objeto global dentro de nuestra función. Lo que
 ```
 
 De esta forma, tenemos acceso al objeto global y estamos protegidos de cualquier accidente. Nuestro código está a salvo!
+
+## Homework
+
+Completa la tarea descrita en el archivo [README](https://github.com/soyHenry/FT-M1/tree/master/01-JavaScriptAvanzado-I/homework)

@@ -187,3 +187,7 @@ Recordemos que las computadoras, solo entienden 0s y 1s. Ahora bien, ¿Nosotros 
 Existen lenguajes de alto y bajo nivel que luego deben ser traducidos a lenguaje maquina, lenguaje interpretable por la computadora. La "traducción" lo llamaremos compilación.
 
 ![Compilar](../_src/assets/00-IntroToCS/compilation.png)
+
+## Homework
+
+Completa la tarea descrita en el archivo [README](https://github.com/soyHenry/FT-M1/tree/master/00-IntroToCS/homework)

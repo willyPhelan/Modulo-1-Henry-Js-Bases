@@ -176,3 +176,7 @@ Esto que vemos arriba, es lo que se llama la __pila de recursión__, básicament
 ![RecursionOverFlow](../_src/assets/06-Algoritmos-I/recursionof.jpg)
 
 Por lo tanto tenemos que estar seguros que cuando llamamos a un función recursiva no llenemos el _runtime stack_, ya que al llenarse va a crashear el runtime con un error de __[Stack Overflow](http://stackoverflow.com)__, o _desbordamiento de pila_.
+
+## Homework
+
+Completa la tarea descrita en el archivo [README](https://github.com/soyHenry/FT-M1/blob/master/07-Algoritmos-II/homework/README.md)

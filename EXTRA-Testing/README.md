@@ -256,3 +256,7 @@ describe.only('Invalid inputs', () => {
 ```
 
 ![describe only](../_src/assets/EXTRA-Testing/describe-only.png)
+
+## Homework
+
+Completa la tarea descrita en el archivo [README](https://github.com/soyHenry/FT-M1/blob/master/EXTRA-Testing/homework/README.md)
