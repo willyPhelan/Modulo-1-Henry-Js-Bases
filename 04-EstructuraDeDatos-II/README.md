@@ -35,7 +35,7 @@ eleventyNavigation:
 
 Básicamente, las listas enlazadas, son una secuencia de nodos enlazados entre ellos y que contienen información. Podemos decir que cada nodo contiene datos y además uno o más links a otros nodos. Según las restricciones que tengan la cantidad de links, estas pueden ser simplemente enlazadas, dobles o múltiples.
 
-![SingleList](../_src/assets/03-EstructuraDeDatos-I/singlelist.png)
+![no-box](../_src/assets/03-EstructuraDeDatos-I/singlelist.png)
 
 ¿Donde podemos usar una lista enlazada? Por ejemplo, si tenemos que modelar el plan de vuelo de un avión una buena posibilidad sería una lista enlazada de aeropuertos. O en el browser para poder ir hacia atrás y adelante en las páginas web del historial también podríamos usar una lista doblemente enlazada, o también las podes usar para representar un mazo de cartas para jugar blackjack. :smile:
 
@@ -44,14 +44,15 @@ Básicamente, las listas enlazadas, son una secuencia de nodos enlazados entre e
 Hagamos nuestra primera lista enlazada.
 Como cada nodo puede ser un objeto por sí mismo, vamos a codear dos constructores: el _nodo_ y la _lista_ en si.
 
-
 El nodo contiene datos y un puntero o un link al siguiente nodo, por defecto el nodo no va a apuntar a ningún otro nodo.
+
 ```javascript
 function Node(data) {
     this.data = data;
     this.next = null;
 }
 ```
+
 La clase lista, necesita sólamente un puntero o link que apunte al primer nodo de la lista. Adicionalmente vamos a agregar la propiedad length, para poder saber siempre la longitud de nuestra lista enlazada. Al crear una lista va a estar vacía por o tanto la cabeza es `null` y _length_ es cero.
 
 ```javascript
@@ -80,7 +81,6 @@ _El orden en el que actualizan los punteros es muy importante. Si actualizan el 
     * Del medio de la lista.
 
 ![ScarNodo](../_src/assets/03-EstructuraDeDatos-I/listaRemove.gif)
-
 
 ![Remove](../_src/assets/03-EstructuraDeDatos-I/listaRemove.png)
 
@@ -127,13 +127,12 @@ List.prototype.getAll = function(){
 
 Genial! Como ejercicio van a tener que implementar las demás funcionalidades ustedes mismos.
 
-
 ### Listas Doblemente Enlazadas
 
 En la lista que vimos antes, sólo podemos recorrer la lista en un solo sentido. En algunos casos nos puede servir recorrer la lista en los dos sentidos, para tales casos lo que vamos a usar es una lista doblemente enlazada.
 Como se puede imaginar, una lista doblemente enlazada es aquella que cada nodo tiene dos links, uno para el nodo siguiente, y otro para el nodo anterior.
 
-![DoubleList](../_src/assets/03-EstructuraDeDatos-I/doueblelist.png)
+![no-box](../_src/assets/03-EstructuraDeDatos-I/doueblelist.png)
 
 Ahora es fácil ir y venir entre los items. Ahora las operaciones tienen un paso más, que es hacer que los nuevos links apunten al nodo correcto.
 
@@ -141,7 +140,7 @@ Ahora es fácil ir y venir entre los items. Ahora las operaciones tienen un paso
 
 Esta estructura que guarda los datos de una manera asociativa, o sea con un par clave-valor o key-value. Los datos son guardados como en un arreglo, pero los índices tienen que ver con lo qué está guardado adentro. Esto hace que sean muy rápidas para buscar datos.
 
-![Hash](../_src/assets/03-EstructuraDeDatos-I/hashfunction.png)
+![no-box](../_src/assets/03-EstructuraDeDatos-I/hashfunction.png)
 
 De hecho, la función que transforman un elemento en una cadena de longitud finita (a esto se lo conoce como _hash_) se llama función _hash_. El término hash proviene, aparentemente, de la analogía con el significado estándar (en inglés) de dicha palabra en el mundo real: picar y mezclar. Donald Knuth cree que H. P. Luhn, empleado de IBM, fue el primero en utilizar el concepto en un memorándum fechado en enero de 1953. Su utilización masiva no fue hasta después de 10 años.
 
