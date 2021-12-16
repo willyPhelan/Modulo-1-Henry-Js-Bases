@@ -1,8 +1,20 @@
+---
+title: Introducción
+layout: intro
+permalink: "/index.html"
+eleventyNavigation:
+  key: Intro
+  order: 0
+---
 <p align='left'>
-    <img src='https://static.wixstatic.com/media/85087f_0d84cbeaeb824fca8f7ff18d7c9eaafd~mv2.png/v1/fill/w_160,h_30,al_c,q_85,usm_0.66_1.00_0.01/Logo_completo_Color_1PNG.webp' </img>
+    <img alt="HenryLogo"src='https://static.wixstatic.com/media/85087f_0d84cbeaeb824fca8f7ff18d7c9eaafd~mv2.png/v1/fill/w_160,h_30,al_c,q_85,usm_0.66_1.00_0.01/Logo_completo_Color_1PNG.webp' </img>
 </p>
 
-# Modulo I - Foundations
+# Modulo I 
+
+#### Fundamentos de JavaScript
+
+<div class="hide">
 
 - [Intro to Computer Science](./00-IntroToCS)
 - [Javascript Avanzado I](./01-JavaScriptAvanzado-I)
@@ -12,6 +24,8 @@
 - [Estructura de Datos III](./05-EstructuraDeDatos-III)
 - [Algoritmos I](./06-Algoritmos-I)
 - [Algoritmos II](./07-Algoritmos-II)
+
+</div >
 
 ## Proceso de subida de homeworks
 

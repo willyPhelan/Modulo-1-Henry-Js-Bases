@@ -1,8 +1,18 @@
+---
+title: Introducción a Computer Science
+feedbackID: 00-IntroToCS
+permalink: /Intro_CS/
+eleventyNavigation:
+  key: Intro CS
+  order: 1
+---
+
+
+![HenryLogo](/_src/assets/logo-white.png)
 
 
 
-
-<p>
+<p class="hide">
   <a href="https://airtable.com/shr5KEX8NFdrG14j9?prefill_clase=00-IntroToCS">
     <img src="https://static.thenounproject.com/png/204643-200.png" width="100"/>
     <br>
@@ -30,7 +40,7 @@ En última instancia, ingeniería computacional. En esta instancia podemos encon
 Para poder entender el funcionamiento de una computadora y sus orígenes, antes tenemos que conocer qué es y cómo funciona un circuito eléctrico.
 Un circuito eléctrico es una interconexión de componentes eléctricos que transporta corriente eléctrica a través de una trayectoria cerrada. Imaginemos una batería, ahora pensemos que dicha batería está conectada a través de cables a una lámpara, si deseamos prender la lámpara necesitamos que la misma reciba corriente, ¿Cómo haríamos eso? Podemos tener un interruptor el cual, al cerrarlo prenda la lámpara.
 
-![AND Operator](./img/AND.png)
+![AND Operator](../_src/assets/00-IntroToCS/AND.png)
 
 En el caso ilustrado para poder prender la lámpara necesitamos cerrar tanto A como B. Esto se debe a que si cierro A pero no B, la energía de la batería logra llegar hasta el interruptor B, pero dado que el interruptor B está abierto, la energía se pierde y por lo tanto no llega al otro extremo derecho, no llega a la lámpara.
 Si A está abierto, pero B cerrado, la energía no llega al interruptor B, y por consiguiente, la lámpara no podría prenderse.
@@ -38,7 +48,7 @@ En el caso de que tanto el interruptor A como el interruptor B estén cerrados, 
 
 Una alternativa, sería colocar dos interruptores de forma paralela de forma tal que si cierro uno, pero mantengo el otro abierto, la energía tiene un camino alternativo por donde pasar.
 
-![OR Operator](./img/OR.png)
+![OR Operator](../_src/assets/00-IntroToCS/OR.png)
 
 En este caso, si cierro el interruptor A pero mantengo el interruptor B abierto, la lámpara se prende igual. Esto se debe a que la energía de la batería pasa por el camino cerrado hasta alcanzar la lámpara. Análogo es el caso en el que el interruptor A está abierto y el interruptor B cerrado.
 
@@ -132,8 +142,10 @@ Es el sistema de numeración más simple, posee un único símbolo para represen
 ### Números Romanos:
 En este caso existen 7 símbolos o signos para representar todos los números posibles. El orden de estos símbolos, importa, se basa en un sistema aditivo, cada signo representa un valor que se va sumando al anterior. La numeración romana, luego, evolucionó a un sistema sustractivo, en el cual algunos signos en lugar de sumar, restan. Si el valor a la izquierda es menor, entonces resta.
 
-Por ejemplo: <br/>
-CXVII = cien + diez + cinco + uno + uno <br/>
+Por ejemplo: 
+
+CXVII = cien + diez + cinco + uno + uno 
+
 MCMV = mil  + (mil - cien) + cinco
 
 
@@ -160,7 +172,8 @@ Por lo tanto:
 En cuanto al pasaje de decimal a binario, debemos dividir por dos y quedarnos con el resto, dicho resto va a ser quien nos marque el binario involucrado.
 
 Por ejemplo:
-Realizamos la operación inversa, convertimos 21 en binario.<br/>
+Realizamos la operación inversa, convertimos 21 en binario.
+
 21/2 = 10 (resto 1)
 10/2 = 5 (resto 0)
 5/2 = 2 (resto 1)
@@ -173,4 +186,4 @@ Ahora leemos de abajo hacia arriba los restos, al concatenarlos, obtendremos nue
 Recordemos que las computadoras, solo entienden 0s y 1s. Ahora bien, ¿Nosotros escribimos en 1's y 0's? No.
 Existen lenguajes de alto y bajo nivel que luego deben ser traducidos a lenguaje maquina, lenguaje interpretable por la computadora. La "traducción" lo llamaremos compilación.
 
-![Compilar](./img/compilation.png)
+![Compilar](../_src/assets/00-IntroToCS/compilation.png)

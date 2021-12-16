@@ -1,4 +1,13 @@
-# Henry
+---
+title: Software Testing
+feedbackID: 00-PrimerosPasos
+permalink: /Software_Testing/
+eleventyNavigation:
+  key: Testing
+  order: 9
+---
+
+![HenryLogo](/_src/assets/logo-white.png)
 
 # Software Testing
 
@@ -9,7 +18,7 @@ Tambien podemos hacer del testing una _filosofía de vida_ cómo veremos más ab
 
 Las respuestas a estas preguntas van a variar según el proyecto que estén haciendo y sus necesidades, pero en general pueden seguir las __guidelines__ seteadas en la siguiente _pirámide_:
 
-![Piramide](./images/piramide.png)
+![Piramide](../_src/assets/EXTRA-Testing/piramide.png)
 
 En la pirámide vemos los tipos de pruebas y la cantidad de ellas que debemos hacer en nuestra aplicación. En general la mayoría de los tests que hagamos va a ser de tipo __unit tests__, en segundo lugar __Integration Tests__ y por último __End-to_End__. Veremos cada uno de estos tipos de tests en detalle.
 
@@ -36,7 +45,7 @@ Un buen test unitario debería ser:
 
 Obviamente, armar todos los tests y correrlos (y pasarlos todos!) nos puede poner un overhead en nuestro proyecto.
 
-![Test Overhead](./images/testOverhead.jpg)
+![Test Overhead](../_src/assets/EXTRA-Testing/testOverhead.jpg)
 
 Si el proyecto es chico, entonces podemos probar todo a mano y darnos cuenta rápido si un cambio afecta o no a las demás partes de la aplicación, pero a medida que el proyecto va a creciendo, se hace más complicado probar todo manualmente y más time-consuming. En esos casos hacer Units Tests automáticos nos va a brindar los siguientes beneficios:
 
@@ -59,7 +68,7 @@ Estos tests sirven para probar la aplicación en su totalidad, es decir, usarla 
 
 Test Driven Development (TDD) es una técnica para construir software que se basa en escribir tests. Básicamente consiste en el siguiente ciclo:
 
-![TDD](./images/TDD.png)
+![TDD](../_src/assets/EXTRA-Testing/TDD.png)
 
 * __Agregá un test nuevo__: En TDD, para cada nueva feature vas a escribir un nuevo test, para hacerlo el desarrollador está obligado a conocer en detalle las especificaciones y requerimientos de esa feature. Esto es clave y es el gran diferenciador entre escribir el _test_ __después__ que hayas escrito el código, de esta forma tenés todo definido antes de empezar por la primera línea de código.
 * __Corré todos los test y fijate si el nuevo falla__: Si ya teniamos otros tests, antes de empezar a codear nos fijamos si realmente el nuevo test NO pasa. En caso contrario estariamos implementando funcionalidad que ya está definida o funcionalidad que no sirve, o tal vez el test esté mal escrito.
@@ -133,7 +142,7 @@ it('should return 15 if adding 7 and 8', () => {
 
 Si ahora ejecutamos `npm test` (Configurar previamente el package.json como mostramos antes) debería ejecutarse los tests.
 
-![Demo Test](./images/demo-test.png)
+![Demo Test](../_src/assets/EXTRA-Testing/demo-test.png)
 
 Si analizamos la estructura del ejemplo anterior usamos algunas palabras que hasta hoy no conociamos, como por ejemplo `it`, `expect` y `toBe`. 
 
@@ -172,7 +181,7 @@ Adicionalmente algunos de estos matchers mencionados arriba se encuentran en la 
 
 Podemos también agrupar tests en "categorías" utilizando la palabra `describe`, por ejemplo siguiendo el ejemplo anterior de la suma podríamos tener casos con numeros enteros, otros con números decimales y otro con inputs inválidos:
 
-![Describe Demo](./images/describe-demo.png)
+![Describe Demo](../_src/assets/EXTRA-Testing/describe-demo.png)
 
 Es posible armar también subcategorias poniendo describes dentro de otros describes.
 
@@ -206,7 +215,7 @@ xdescribe('Invalid inputs', () => {
 
 Si observamos ahora la ejecución del comando `npm test sum-describe` veremos que el segundo test del describe de 'Decimal numbers' y todo el describe de 'Invalid inputs' no se van a ejecutar:
 
-![Skip](./images/skip.png)
+![Skip](../_src/assets/EXTRA-Testing/skip.png)
 
 #### only
 
@@ -228,7 +237,7 @@ describe('Invalid inputs', () => {
 
 Ahora al ejecutar `npm test sum-describe` veremos que todo el resto de los tests fueron salteados:
 
-![it only](./images/it-only.png)
+![it only](../_src/assets/EXTRA-Testing/it-only.png)
 
 Lo mismo se puede aplicar sobre los `describe` para ejecutar únicamente un grupo de tests.
 
@@ -246,4 +255,4 @@ describe.only('Invalid inputs', () => {
 });
 ```
 
-![describe only](./images/describe-only.png)
+![describe only](../_src/assets/EXTRA-Testing/describe-only.png)
