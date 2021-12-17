@@ -92,7 +92,7 @@ hr {
   margin-bottom: 1rem;
 }
 
-.lesson h3:first-child {
+.lesson h3:first-of-type  {
   display: none
 }
 
