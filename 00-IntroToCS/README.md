@@ -19,8 +19,9 @@ eleventyNavigation:
   </a>
 </p>
 
+# Computer Science
 
-# Introducción a Computer Science
+#### Introducción
 
 Computer Science (CS) es el estudio de procesos algorítmicos, sistemas computacionales y las computadoras per se. A continuación se darán a conocer las tres principales áreas de estudio.
 
