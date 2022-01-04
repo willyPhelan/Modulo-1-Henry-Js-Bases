@@ -57,11 +57,11 @@ En el caso promedio, el orden es `O(n·log n)`.
 
 ### MergeSort
 
-Este algoritmo está inspirado en QuickSort, así que tambien es recursivo. Lo que hace es lo siguiente: 
-	
-	* Divide el conjunto en dos grupos iguales
-	* Ordena recursivamente los dos grupos
-	* Junta (o mergea) los grupos ordenados.
+Este algoritmo está inspirado en QuickSort, así que tambien es recursivo. Lo que hace es lo siguiente:
+ 
+ * Divide el conjunto en dos grupos iguales
+ * Ordena recursivamente los dos grupos
+ * Junta (o mergea) los grupos ordenados.
 
 ![MergeSort](../_src/assets/06-Algoritmos-I/mergesort.gif)
 
@@ -71,7 +71,6 @@ Ahora veamos su complejidad, que es similar al mejor caso de Quicksort. En cada 
 
 Por lo tanto el algoritmo tiene una complejidad de `O (N * log( N ))` en todos los casos, sin importar como esté ordenando al principio!
 Lo malo de este algoritmo es que necesita más memoria que los demás algoritmos.
-
 
 ## Otros Algoritmos de ordenamiento
 
@@ -127,14 +126,15 @@ Si nos proponemos a recorrer todos los nodos de un árbol, vamos a notar que dis
 
 Consideremos el siguiente árbol:
 
-```
+```js 
     A
    / \
   B   C
  /   / \
 D   E   F
 ```
-#### Depth First Search 
+
+#### Depth First Search
 
 Una búsqueda tipo DFS visitaría los nodos en el siguiente orden:
 `A, B, D, C, E, F`. Gráficamente, vamos _bajando_ a través del árbol hasta llegar a una __hoja__. Luego seguidos por la siguiente rama y la recorremos del mismo modo.
@@ -155,15 +155,17 @@ La recursión puede ser muy poderosa, y puede ayudarnos a resolver algunos probl
 Veamos un ejemplo: Habiamos visto la función factorial, básicamente el factorial de n o n! es `n! = 1 * 2 * 3 * 4 * ... * n`. ej: `4! = 1 * 2 * 3 * 4`.
 Si lo definimos recursivamente, podemos decir que `n! = n * ( n-1 )!`. O sea, el factorial de n es igual a n por el factorial de n-1. Si lo piensan van a ver que se forma la misma fórmula que antes, pero hay un caso particular que es cuando `n = 0`, en ese caso tenemos que definir que hacemos. Por definición `0! = 1`, así que ese va a ser nuestro __caso base__: es el caso que devuelve algo concreto y donde se termina la recursión, su resultado va a ser usado para calcular los resultados de cada llamada.
 O sea que para definir recursivamente la función factorial vamos a decir:
-```
+
+```js
 0! = 1
 n! = n * (n-1)!
 ```
+
 Ahora está perfectamente definida.
 
 Si ejecutamos eso tendriamos algo así:
 
-```
+```js
 4! = 4 * 3!
    = 4 * 3 * 2!
    = 4 * 3 * 2 * 1!
