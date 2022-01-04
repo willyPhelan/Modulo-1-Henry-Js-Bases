@@ -85,7 +85,6 @@ A | NOT
 1 |  0
 0 |  1
 
-
 ## Half Adder
 En función de las compuertas o puertas lógicas y a través de la combinación de estas podemos lograr diversas operaciones, por ejemplo un sumador de números.
 En la escuela nos enseñaron a sumar con números decimales pero, las computadoras en su interior trabajan con un sistema binario, es decir 1 y 0s.
@@ -97,7 +96,6 @@ En el Half Adder, ese rol de acarreo lo hace la puerta lógica AND mientras que 
 1| 1 | 0  |0 |0
 
 Comenzando de derecha a izquierda. 1 AND 0 = 0 por lo tanto NO acarreo, y por otro lado debo hacer 1 XOR 0 = 1. El segundo, es análogo
-
 
 1 | 0   | 0     | 1   | 1
 -- | --- | ----- | ----| ---
@@ -117,7 +115,6 @@ Llegamos al último caso, 1 AND 1 = 1, por lo tanto hay acarreo.
 --|-- | --- | ----- | ----| ---
 |1| 1 | 0  |0 |0
 ||1 |  0 |1 |1
-
 
 1 XOR 1 = 0
 

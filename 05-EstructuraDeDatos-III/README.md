@@ -46,11 +46,11 @@ Para que una estructura de nodos sea un árbol tiene que ser dirigido (o sea que
 
 El siguiente no es un árbol porque tiene nodos no _conexos_:
 
-![notatree](../_src/assets/03-EstructuraDeDatos-I/notatree2.png)
+![no-box](../_src/assets/03-EstructuraDeDatos-I/notatree2.png)
 
 Este otro no es un árbol porque tiene un ciclo:
 
-![notatree](../_src/assets/03-EstructuraDeDatos-I/notatree1.png)
+![no-box](../_src/assets/03-EstructuraDeDatos-I/notatree1.png)
 
 Esta estructura es ampliamente usada, de hecho todos ustedes ya vienen trabajando hace mucho con una estructura de tipo árbol, ¿sabén de que les estoy hablando?
 
@@ -68,7 +68,7 @@ Veamos algunos tipos de árboles que vamos a usar.
 
 Este es un árbol particular que tiene como característica que la cantidad de hijos que puede tener un nodo está restringida a dos (por eso se llama árbol binario).
 
-![Binarytree](../_src/assets/03-EstructuraDeDatos-I/binaryTree.png)
+![no-box](../_src/assets/03-EstructuraDeDatos-I/binaryTree.png)
 
 Un árbol de este estilo puede estar _balanceado_ o no: vamos a decir que un árbol es _balanceado_ cuando la cantidad de nodos que haya a la izquierda del root sea igual (o no difiera en más de una unidad) a la cantidad de nodos en la parte izquierda.
 
@@ -89,7 +89,7 @@ derecho(i) = 2*i + 2   // el hijo derecho del nodo que está en i
 
 ### Arbol AVL
 
-Los árboles AVL (por sus inventores  Georgy Adelson-Velsky y Evgenii Landis) es un árbol binario de búsqueda, pero que mantiene todo el tiempo al árbol _balanceado_. Básicamente lo que hace es, cada vez que se inserta o saca un nodo controla que todos los nodos estén balanceados. Y si no lo están reacomoda el árbol de tal forma que queden balanceados. 
+Los árboles AVL (por sus inventores  Georgy Adelson-Velsky y Evgenii Landis) es un árbol binario de búsqueda, pero que mantiene todo el tiempo al árbol _balanceado_. Básicamente lo que hace es, cada vez que se inserta o saca un nodo controla que todos los nodos estén balanceados. Y si no lo están reacomoda el árbol de tal forma que queden balanceados.
 
 ![avl](../_src/assets/03-EstructuraDeDatos-I/avl.gif)
 
@@ -99,7 +99,7 @@ Lo malo de este árbol, es que las operaciones de insertar y sacar son muchos m�
 
 Un heap es un árbol binario, con las condiciónes que cada nodo tiene que contener un valor igual o mayor que los de sus hijos y que sea completo, es decir que todas las hojas estén en el último nivel del árbol (o uno menos) y además que esté completo desde la izquierda.
 
-![Heap](../_src/assets/03-EstructuraDeDatos-I/heap.png)
+![no-box](../_src/assets/03-EstructuraDeDatos-I/heap.png)
 
 Cuando se construye un heap al agregar cada valor, tenemos que buscar la posición que les corresponde. O sea, que en cada paso vamos a tener que ir reacomodando el árbol para que siga siendo un _heap_.
 
