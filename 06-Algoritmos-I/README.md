@@ -1,12 +1,3 @@
----
-lessonTitle: Algoritmos I
-feedbackID: 06-Algoritmos-I
-permalink: /Algoritmos_I/
-eleventyNavigation:
-  key: Algoritmos I
-  order: 7
----
-
 ![HenryLogo](https://static.wixstatic.com/media/85087f_0d84cbeaeb824fca8f7ff18d7c9eaafd~mv2.png/v1/fill/w_160,h_30,al_c,q_85,usm_0.66_1.00_0.01/Logo_completo_Color_1PNG.webp)
 
 <table class="hide" width="100%" style='table-layout:fixed;'>
@@ -464,6 +455,7 @@ O sea que para cada elemento de la lista, tenemos que recorrer n-1 elementos res
 ### BubbleSort
 
 Este algoritmo es muy simple:
+
  1. Recorré los elementos: si dos items adyacentes estan desordenados, hacé un swap.
  2. Si terminas un recorrido sin hacer un swap, ya está ordenado.
 

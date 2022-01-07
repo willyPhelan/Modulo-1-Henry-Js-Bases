@@ -1,12 +1,3 @@
----
-lessonTitle: JavaScript Avanzado II
-feedbackID: 02-JavaScriptAvanzado-II
-permalink: /JS_Avanzado_II/
-eleventyNavigation:
-  key: JS Avanzado II
-  order: 3
----
-
 ![HenryLogo](https://static.wixstatic.com/media/85087f_0d84cbeaeb824fca8f7ff18d7c9eaafd~mv2.png/v1/fill/w_160,h_30,al_c,q_85,usm_0.66_1.00_0.01/Logo_completo_Color_1PNG.webp)
 <table class="hide" width="100%" style='table-layout:fixed;'>
   <tr>
@@ -77,12 +68,12 @@ arr[1]() // 3
 arr[2]() // 3
 ```
 
-¿Porqué el console log da todos `3`? 
+¿Porqué el console log da todos `3`?
 
 Para entenderlo veamos cómo se van creando los contextos de ejecución y donde van quedando los objetos que creamos.
 En un primer momento se creará el contexto global, donde van estar definida la función `creaFuncion` y también el arreglo `arr`.
 
-En un segundo momento, se va a crear el contexto de la función `creaFuncion` que fue ejecutada. Dentro de ella, se reserva espacio para un arreglo llamado `arreglo`, y para la variable `i`. 
+En un segundo momento, se va a crear el contexto de la función `creaFuncion` que fue ejecutada. Dentro de ella, se reserva espacio para un arreglo llamado `arreglo`, y para la variable `i`.
 
 ![Closure dos](../_src/assets/01-JavaScriptAvanzado-I/closure2.png)
 
@@ -164,7 +155,7 @@ Lo que realmente ocurre es que cuando pasan los tres segundos (esto lo hace alg�
 
 O sea que se hicieron algo parecido a esto (tal vez usando eventos), entonces ya usaron _functions expressions_ y muy probablemente _closures_ tambien!
 
-## Call, Apply and Bind.
+## Call, Apply and Bind
 
 Cuando vimos el keyword `this`, dijimos que el interprete era el que manejaba el valor de este. Bueno, esto no es del todo cierto, hay una serie de variables que nos van a permitir poder setear nosotros el keyword `this`.
 
@@ -193,13 +184,14 @@ var logNombre = function(){
 }
 ```
 
-En este ejemplo, vamos a usar el keyword `this` para invocar el método del objeto persona. Como verán, el código de arriba produce un error, ya que cuando ejecutamos `logNombre()`, el `this` que está adentro hace referencia al objeto global, y ese objeto no tiene un método `getNombre`. 
+En este ejemplo, vamos a usar el keyword `this` para invocar el método del objeto persona. Como verán, el código de arriba produce un error, ya que cuando ejecutamos `logNombre()`, el `this` que está adentro hace referencia al objeto global, y ese objeto no tiene un método `getNombre`.
 
 ```javascript
 
 var logNombrePersona = logNombre.bind(persona);
 logNombrePersona();
 ```
+
 La función `bind()` devuelve una __copia__ de la función, la cúal tiene internamente asociado el keyword `this` al objeto que le pasemos por parámtro. Si la llamamos sobre `logNombre` y le pasamos `persona` como argumento, vamos a ver que al ejecutar la _nueva_ función `logNombrePersona()` se va a loguear correctamente el nombre de `persona`.
 
 Si usamos `bind()` entonces la nueva función queda __siempre__ ligada al objeto que pasamos cómo argumento. O sea que si quisieramos usarla para otro objeto, tendríamos que crear una nueva _copia_ de la función y _bindiarle_ un nuevo objeto.
@@ -220,6 +212,7 @@ var logNombre = function(arg1, arg2){
 
 logNombre.call(persona, 'Hola', ', Cómo estas?'); //Hola Franco Chequer , Cómo estas?
 ```
+
 De hecho, la función `apply` es casi igual a `call`, excepto que recibe los argumentos de distinta manera. `apply` necesita dos arguemntos, el primero es el objeto a bindear con `this` (igual que `call`) y el segundo parámetro es un arreglo, en este arreglo pasamos los argumentos que va a usar la función que invocamos. Por ejemplo, para obtener el mismo comportamiento que arriba, pero con `apply`:
 
 ```javascript

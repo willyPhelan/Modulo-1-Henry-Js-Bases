@@ -1,12 +1,3 @@
----
-lessonTitle: Software Testing
-feedbackID: ""
-permalink: /Software_Testing/
-eleventyNavigation:
-  key: Testing
-  order: 9
----
-
 ![HenryLogo](https://static.wixstatic.com/media/85087f_0d84cbeaeb824fca8f7ff18d7c9eaafd~mv2.png/v1/fill/w_160,h_30,al_c,q_85,usm_0.66_1.00_0.01/Logo_completo_Color_1PNG.webp)
 
 # Software Testing
@@ -110,7 +101,7 @@ Luego ejecutamos `npm test` y ya estaríamos corriendo los tests, como inicialme
 * Correr un determinado archivo de test mediante su path: `jest path/to/test.js`
 * Correr solo UN test mediante su nombre (Ya veremos como definir nombre para los tests): `jest -t name-spec`
 * Correr en modo 'watcher': `jest --watch` o `jest --watchAll` (El primero solo correra los tests que fueron afectados por alguna modificación desde la última vez que hicimos cambio en el código)
-* Agregar un resumen de cada archivo de test: `jest --verbose` (En el caso de ser un único archivo automáticamente lo hace sin necesidad del flag) 
+* Agregar un resumen de cada archivo de test: `jest --verbose` (En el caso de ser un único archivo automáticamente lo hace sin necesidad del flag)
 
 ### Ejemplo (Está dentro de la carpeta demo)
 

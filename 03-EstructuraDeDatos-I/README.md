@@ -1,12 +1,3 @@
----
-lessonTitle: Estructura de datos I
-feedbackID: 03-EstructuraDeDatos-I
-permalink: /Estructura_de_datos_I/
-eleventyNavigation:
-  key: Datos I
-  order: 4
----
-
 ![HenryLogo](https://static.wixstatic.com/media/85087f_0d84cbeaeb824fca8f7ff18d7c9eaafd~mv2.png/v1/fill/w_160,h_30,al_c,q_85,usm_0.66_1.00_0.01/Logo_completo_Color_1PNG.webp)
 <table class="hide" width="100%" style='table-layout:fixed;'>
   <tr>
@@ -73,7 +64,6 @@ Este es un ejemplo muy básico de la estructura de una función recursiva (que n
 ### Suma recursiva
 
 Queremos sumar todos los números hasta un corte, entonces el caso base seria  cuando llegamos a 0 si sumamos desde el número y disminuyendo (porque así se me ocurrió en esta oportunidad), y nuestra llamada recursiva debería aparecer cuando ya sumamos y queremos que pase de número.
-
 
 ``` javascript
 // vamos a crear la función con la variable `num` que me pasan por parámetro 
@@ -204,7 +194,7 @@ Pruebenlo!
 
 ### Números Naturales (N)
 
-Los números naturales se definen como todos aquellos números mayores a cero sin decimales, o en una definición más matemática : 
+Los números naturales se definen como todos aquellos números mayores a cero sin decimales, o en una definición más matemática :
 
 > Definimos que 0 es un _Natural_.
 
@@ -286,7 +276,6 @@ El arreglo es una colección finita de elementos que ocupan espacios contiguos d
 ![Array](../_src/assets/03-EstructuraDeDatos-I/array.jpg)
 
 Los arreglos nos sirven para guardar una colección de cosas (objetos, enteros, funciones, etc...) que tengan algo en común. Lo bueno de los arreglos es que la inserción es muy rápida, y es fácil acceder a un objeto si conocemos su índice. Pero no es tan bueno cuando tenemos que buscar un objeto en él, ya que tenemos que recorrerlo entero para encontrarlo. Borrar un elemento también es medio costoso.
-
 
 ## Sets
 
