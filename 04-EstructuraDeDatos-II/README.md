@@ -1,6 +1,6 @@
 ---
-title: Estructura de datos II
-feedbackID: 00-PrimerosPasos
+lessonTitle: Estructura de datos II
+feedbackID: 04-EstructuraDeDatos-II
 permalink: /Estructura_de_datos_II/
 eleventyNavigation:
   key: Datos II

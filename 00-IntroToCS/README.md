@@ -1,5 +1,5 @@
 ---
-title: Introducción a Computer Science
+lessonTitle: Introducción a Computer Science
 feedbackID: 00-IntroToCS
 permalink: /Intro_CS/
 eleventyNavigation:

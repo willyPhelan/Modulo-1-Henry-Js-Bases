@@ -1,6 +1,6 @@
 ---
-title: Estructura de datos III
-feedbackID: 00-PrimerosPasos
+lessonTitle: Estructura de datos III
+feedbackID: 05-EstructuraDeDatos-III
 permalink: /Estructura_de_datos_III/
 eleventyNavigation:
   key: Datos III

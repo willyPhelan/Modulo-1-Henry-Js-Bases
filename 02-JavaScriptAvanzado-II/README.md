@@ -1,5 +1,5 @@
 ---
-title: JavaScript Avanzado II
+lessonTitle: JavaScript Avanzado II
 feedbackID: 02-JavaScriptAvanzado-II
 permalink: /JS_Avanzado_II/
 eleventyNavigation:

@@ -1,6 +1,6 @@
 ---
-title: Algoritmos I
-feedbackID: 00-PrimerosPasos
+lessonTitle: Algoritmos I
+feedbackID: 06-Algoritmos-I
 permalink: /Algoritmos_I/
 eleventyNavigation:
   key: Algoritmos I

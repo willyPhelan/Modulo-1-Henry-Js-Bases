@@ -1,6 +1,6 @@
 ---
-title: Estructura de datos I
-feedbackID: 00-PrimerosPasos
+lessonTitle: Estructura de datos I
+feedbackID: 03-EstructuraDeDatos-I
 permalink: /Estructura_de_datos_I/
 eleventyNavigation:
   key: Datos I
