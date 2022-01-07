@@ -1,0 +1,9 @@
+{
+  "lessonTitle": "Computer Science",
+  "feedbackID": "00-IntroToCS",
+  "permalink": "/Intro_CS/",
+  "eleventyNavigation": {
+    "key": "Intro CS",
+    "order": 1
+  }
+}
