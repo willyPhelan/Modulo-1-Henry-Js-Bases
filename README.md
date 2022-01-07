@@ -1,8 +1,25 @@
-<p align='left'>
-    <img src='https://static.wixstatic.com/media/85087f_0d84cbeaeb824fca8f7ff18d7c9eaafd~mv2.png/v1/fill/w_160,h_30,al_c,q_85,usm_0.66_1.00_0.01/Logo_completo_Color_1PNG.webp' </img>
-</p>
+---
+title: Introducción
+layout: intro
+permalink: "/index.html"
+eleventyNavigation:
+  key: Intro
+  order: 0
+---
 
-# Modulo I - Foundations
+![HenryLogo](https://static.wixstatic.com/media/85087f_0d84cbeaeb824fca8f7ff18d7c9eaafd~mv2.png/v1/fill/w_160,h_30,al_c,q_85,usm_0.66_1.00_0.01/Logo_completo_Color_1PNG.webp)
+
+---
+
+### Podes ver el contenido de todo el repositorio en formato web tipeando `npm install` y `npm start` e ingresando luego a <http://localhost:8080>
+
+---
+
+# Módulo 1
+
+#### Fundamentos de JavaScript
+
+<div class="hide">
 
 - [Intro to Computer Science](./00-IntroToCS)
 - [Javascript Avanzado I](./01-JavaScriptAvanzado-I)
@@ -12,6 +29,8 @@
 - [Estructura de Datos III](./05-EstructuraDeDatos-III)
 - [Algoritmos I](./06-Algoritmos-I)
 - [Algoritmos II](./07-Algoritmos-II)
+
+</div >
 
 ## Proceso de subida de homeworks
 
@@ -23,15 +42,16 @@ __IMPORTANTE:__ Luego de completar cada una de las homeworks del día deberán e
   git push
 ```
 
-### Extra:
+### Extra
 
- * [Patrones de JavaScript](https://addyosmani.com/resources/essentialjsdesignpatterns/book/)
- * [Manejo de errores](./01-JavaScriptAvanzado-I/errores.md)
- * [JS orientado a Objetos](./01-JavaScriptAvanzado-I/OOP.md)
+- [Patrones de JavaScript](https://addyosmani.com/resources/essentialjsdesignpatterns/book/)
+- [Manejo de errores](./01-JavaScriptAvanzado-I/errores.md)
+- [JS orientado a Objetos](./01-JavaScriptAvanzado-I/OOP.md)
 
 ### Links copados
 
 > [En esta página Dmitry Soshnikov](http://dmitrysoshnikov.com/ecmascript/javascript-the-core/#this-value) explica muy a fondo varios conceptos del lenguaje, casi a nivel de la especificación técnica.
+
 - __Streams y pipes__: [substack](https://github.com/substack/stream-handbook)
 - [__Event loop__](https://www.youtube.com/watch?v=8aGhZQkoFbQ)
 - [__Inheritance Patterns__](http://davidshariff.com/blog/javascript-inheritance-patterns/#first-article)

@@ -1,6 +1,15 @@
-# Algoritmos
+---
+title: Algoritmos II
+feedbackID: 00-PrimerosPasos
+permalink: /Algoritmos_II/
+eleventyNavigation:
+  key: Algoritmos II
+  order: 8
+---
 
-<table width="100%" style='table-layout:fixed;'>
+![HenryLogo](https://static.wixstatic.com/media/85087f_0d84cbeaeb824fca8f7ff18d7c9eaafd~mv2.png/v1/fill/w_160,h_30,al_c,q_85,usm_0.66_1.00_0.01/Logo_completo_Color_1PNG.webp)
+
+<table class="hide" width="100%" style='table-layout:fixed;'>
   <tr>
     <td>
       <a href="https://airtable.com/shr5KEX8NFdrG14j9?prefill_clase=07-Algoritmos-II">
@@ -19,6 +28,8 @@
   </tr>
 </table>
 
+# Algoritmos II
+
 ## QuickSort
 
 Ahora vamos a ver un algoritmo mucho más rápido, también es un poco más complejo. QuickSort está diseñado utilizando la Técnica __[Divide and Conquer](https://es.wikipedia.org/wiki/Algoritmo_divide_y_vencer%C3%A1s)__ que consiste en dividir un problema en subproblemas más pequeños, luego encontrar la solución de los problemas pequeños y combinarlas para encontrar la solución mayor.
@@ -29,38 +40,37 @@ Además _QuickSort_ es recursivo, o sea que se llama a sí mismo. Básicamente e
 * La lista queda separada en dos sublistas, una formada por los elementos a la izquierda del pivote, y otra por los elementos a su derecha.
 * Repetir este proceso de forma recursiva para cada sublista mientras éstas contengan más de un elemento. Una vez terminado este proceso todos los elementos estarán ordenados.
 
-![QuickSort](./img/Sorting_quicksort_anim.gif)
+![QuickSort](../_src/assets/06-Algoritmos-I/Sorting_quicksort_anim.gif)
 
 Como se puede suponer, la eficiencia del algoritmo depende de la posición en la que termine el pivote elegido.
 
 En el mejor caso, el pivote termina en el centro de la lista, dividiéndola en dos sublistas de igual tamaño. En este caso, el orden de complejidad del algoritmo es `O(n·log n)`.
 
-![QuickSortBest](./img/quicksortBest.png)
+![QuickSortBest](../_src/assets/06-Algoritmos-I/quicksortBest.png)
 
 En el peor caso, el pivote termina en un extremo de la lista. El orden de complejidad del algoritmo es entonces de `O(n²)`.
 
-![QuickSortWorst](./img/quicksortWorst.png)
+![QuickSortWorst](../_src/assets/06-Algoritmos-I/quicksortWorst.png)
 
 El peor caso dependerá de la implementación del algoritmo, aunque habitualmente ocurre en listas que se encuentran ordenadas, o casi ordenadas. Pero principalmente depende del pivote, si por ejemplo el algoritmo implementado toma como pivote siempre el primer elemento del array, y el array que le pasamos está ordenado, siempre va a generar a su izquierda un array vacío, lo que es ineficiente.
 En el caso promedio, el orden es `O(n·log n)`.
 
 ### MergeSort
 
-Este algoritmo está inspirado en QuickSort, así que tambien es recursivo. Lo que hace es lo siguiente: 
-	
-	* Divide el conjunto en dos grupos iguales
-	* Ordena recursivamente los dos grupos
-	* Junta (o mergea) los grupos ordenados.
+Este algoritmo está inspirado en QuickSort, así que tambien es recursivo. Lo que hace es lo siguiente:
+ 
+ * Divide el conjunto en dos grupos iguales
+ * Ordena recursivamente los dos grupos
+ * Junta (o mergea) los grupos ordenados.
 
-![MergeSort](./img/mergesort.gif)
+![MergeSort](../_src/assets/06-Algoritmos-I/mergesort.gif)
 
 Ahora veamos su complejidad, que es similar al mejor caso de Quicksort. En cada nivel ( sabemos que hay `log(n)` niveles porque se divide en dos) se realizan `n` operaciones, una por cada elemento.
 
-![MergeSortTime](./img/mergesortTime.png)
+![MergeSortTime](../_src/assets/06-Algoritmos-I/mergesortTime.png)
 
 Por lo tanto el algoritmo tiene una complejidad de `O (N * log( N ))` en todos los casos, sin importar como esté ordenando al principio!
 Lo malo de este algoritmo es que necesita más memoria que los demás algoritmos.
-
 
 ## Otros Algoritmos de ordenamiento
 
@@ -72,7 +82,7 @@ Primero analizemos qué complejidad tiene el armado del Heap. Cómo habiamos vis
 
 Ahora veamos con __Heapsort__ utiliza esta estructura para ordenar. Como vemos el heap está _semi_ ordenado. Por lo pronto sabemos que el nodo ráiz, tiene el máximo valor. Sabiendo eso, lo que hace el algoritmo es sacar el nodo raíz (seria el primer elemento ordenado),  y pone el última nodo del heap en la raíz -esto seguramente rompe la regla de que los padres sean mayores que sus hijos-, y luego reacomoda el árbol para que vuelva a ser un heap. El algoritmo repite esto hasta que no queden nodos en el heap. El resultado es el arreglo ordenado!
 
-![HeapSort](./img/heapSort.gif)
+![HeapSort](../_src/assets/06-Algoritmos-I/heapSort.gif)
 
 Como tenemos que reordenar el árbol N veces, y habiamos dicho que ordenarlo costaba `O( log (n) )` entonces la complejidad este algoritmo es de `O(N * log(n) )`. Bastante bien, no?
 
@@ -80,7 +90,7 @@ Como tenemos que reordenar el árbol N veces, y habiamos dicho que ordenarlo cos
 
 Este algoritmo nos va a servir solamente para contar números enteros. Básicamente, lo que hace es iniciar un arreglo vacio y usarlo para contar los elementos. Para contar, va recorriendo el conjunto desordenado y suma en el arreglo en uno en la posición cuyo índice es igual al numero del conjunto.
 
-![count](./img/countsort.gif)
+![count](../_src/assets/06-Algoritmos-I/countsort.gif)
 
 Finalmente, mira el arreglo de contadores, y vas 'sacando' los elementos que contó. Como lo pusimos en un índice que ya viene ordenado, al sacarlos vamos a tener todos los elementos ordenados.
 Nos damos cuenta que este algoritmo puede ocupar muchísima memoria, ya que si tenemos un conjunto con mucha variabilidad vamos a tener un arreglo muy grande y casi vació.
@@ -91,7 +101,7 @@ Con respecto a su complejidad, el algoritmo tiene que recorrer una vez el conjun
 
 Por último, vamos a mencionar al algoritmo Radix Sort. Este es muy parecido al Count Sort, en el sentido que sólo sirve para ordenar números enteros (en realidad, si logramos representar algo en números enteros, entonces podemos ordenar ese algo con Radix). Básicamente utiliza el mismo principio que Count, ya que mete en un arreglo fijo los números, pero ahora lo hace según las unidades de ese número, una vez ordenado repite el mismo proceso, pero con las decenas, y así sucesivamente hasta terminar con el arreglo ordenado. Veamos el ejemplo de abajo para comprender cómo funciona:
 
-![Radix](./img/radixsort.gif)
+![Radix](../_src/assets/06-Algoritmos-I/radixsort.gif)
 
 ## Búsquedas
 
@@ -108,7 +118,7 @@ Cuando buscamos linealmente, en general, no tenemos ninguna pista sobre donde pu
 Por ejemplo, si tuvieramos que buscar un número en un arreglo, si ese arreglo estuviera ordenado, podriamos encontrarlo más rápido, no? (se acuerdan del juego de adivinar el número?) De hecho podriamos ir dividiendo el arreglo en mitades y preguntando si nuestro número está de un lado o del otro. Básicamente, estamos reduciendo el espacio de búsqueda a la mitad en cada paso. De esta forma, vamos a llegar a un espacio tan chico (un sólo elemento) donde encontrar el elemento que queríamos es trivial.
 Como ya sabemos, al dividir en dos varias veces, vamos a tener `log(n)` niveles, como tenemos que buscar una vez en cada _hoja_ que queda, la complejidad de nuestro algoritmo va a ser de `O( log( n ) )`. Bastante mejor que el anterior, no? Y la complejidad agregada al algoritmo es muy poca. Lo único importante es mantener los datos ordenados!
 
-![BinarySearch](./img/binarySearch.gif)
+![BinarySearch](../_src/assets/06-Algoritmos-I/binarySearch.gif)
 
 ### Depth/Breadth First Search
 
@@ -116,14 +126,15 @@ Si nos proponemos a recorrer todos los nodos de un árbol, vamos a notar que dis
 
 Consideremos el siguiente árbol:
 
-```
+```js 
     A
    / \
   B   C
  /   / \
 D   E   F
 ```
-#### Depth First Search 
+
+#### Depth First Search
 
 Una búsqueda tipo DFS visitaría los nodos en el siguiente orden:
 `A, B, D, C, E, F`. Gráficamente, vamos _bajando_ a través del árbol hasta llegar a una __hoja__. Luego seguidos por la siguiente rama y la recorremos del mismo modo.
@@ -137,22 +148,24 @@ La otra forma: BFS, visitaría los nodos de esta manera:
 
 `Para entender la recursión primero tenemos que entender la recursión.`
 
-![Recursión](./img/recursion.jpg)
+![Recursión](../_src/assets/06-Algoritmos-I/recursion.jpg)
 
 Eso es la recursión, es cuando un un método se llama a sí mismo. Por ejemplo, el algoritmo quick sort es recursivo (se puede implementar de forma recursiva o no), ya que divide un conjunto y luego ordenada cada subconjunto usando quick Sort tambien.
 La recursión puede ser muy poderosa, y puede ayudarnos a resolver algunos problemas que sin ella serían complicados de resolver. A veces puede no ser intuitiva, ya que estamos acostumbrados a pensar de manera iterativa más que recursiva.
 Veamos un ejemplo: Habiamos visto la función factorial, básicamente el factorial de n o n! es `n! = 1 * 2 * 3 * 4 * ... * n`. ej: `4! = 1 * 2 * 3 * 4`.
 Si lo definimos recursivamente, podemos decir que `n! = n * ( n-1 )!`. O sea, el factorial de n es igual a n por el factorial de n-1. Si lo piensan van a ver que se forma la misma fórmula que antes, pero hay un caso particular que es cuando `n = 0`, en ese caso tenemos que definir que hacemos. Por definición `0! = 1`, así que ese va a ser nuestro __caso base__: es el caso que devuelve algo concreto y donde se termina la recursión, su resultado va a ser usado para calcular los resultados de cada llamada.
 O sea que para definir recursivamente la función factorial vamos a decir:
-```
+
+```js
 0! = 1
 n! = n * (n-1)!
 ```
+
 Ahora está perfectamente definida.
 
 Si ejecutamos eso tendriamos algo así:
 
-```
+```js
 4! = 4 * 3!
    = 4 * 3 * 2!
    = 4 * 3 * 2 * 1!
@@ -162,6 +175,10 @@ Si ejecutamos eso tendriamos algo así:
 
 Esto que vemos arriba, es lo que se llama la __pila de recursión__, básicamente se va armando una pila en memoria, ya que la primera llamada necesita el resultado de la segunda, y la segunda de la tercera, y así sucesivamente hasta que llegamos al caso base. Desde ahí se puede empezar a resolver cada llamada dentro de la pila hasta que la completamos entera y tenemos nuestro resultado.
 
-![RecursionOverFlow](./img/recursionof.jpg)
+![RecursionOverFlow](../_src/assets/06-Algoritmos-I/recursionof.jpg)
 
 Por lo tanto tenemos que estar seguros que cuando llamamos a un función recursiva no llenemos el _runtime stack_, ya que al llenarse va a crashear el runtime con un error de __[Stack Overflow](http://stackoverflow.com)__, o _desbordamiento de pila_.
+
+## Homework
+
+Completa la tarea descrita en el archivo [README](https://github.com/soyHenry/FT-M1/blob/master/07-Algoritmos-II/homework/README.md)

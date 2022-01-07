@@ -23,7 +23,7 @@ it('Always true', () => {
 ```
 
 <p align="center">
-  <img src="../images/always-true.png" />
+  <img src="../../_src/assets/EXTRA-Testing/always-true.png" />
 </p>
 
 ## Instrucciones
@@ -51,7 +51,7 @@ __PISTA__: Deberán chequear que esa variable sea de tipo 'function' (¿Cómo er
 </details>
 
 <p align="center">
-  <img src="../images/checkSeatStatus-1-error.png" />
+  <img src="../../_src/assets/EXTRA-Testing/checkSeatStatus-1-error.png" />
 </p>
 
 ___
@@ -75,7 +75,7 @@ Ahora escribamos el código para que ese test que acabamos de crear y no está p
 </details>
 
 <p align="center">
-  <img src="../images/checkSeatStatus-1-pass.png" />
+  <img src="../../_src/assets/EXTRA-Testing/checkSeatStatus-1-pass.png" />
 </p>
 
 ___
@@ -204,7 +204,7 @@ ___
 ¿Y cómo paso de una letra a un número de fila?
 
 <p align="center">
-  <img src="../images/fine.jpg" />
+  <img src="../../_src/assets/EXTRA-Testing/fine.jpg" />
 </p>
 
 <details>
@@ -276,7 +276,7 @@ Vamos a reutilizar la función `getRowNumber` dentro de `getSeatStatus` para sab
 </details>
 
 <p align="center">
-  <img src="../images/stop.png" />
+  <img src="../../_src/assets/EXTRA-Testing/stop.png" />
 </p>
 
 ___
@@ -300,13 +300,13 @@ Podemos intentar agrupar los tests según algun criterio, por ejemplo, podría s
 </details>
 
 <p align="center">
-  <img src="../images/describe.png" />
+  <img src="../../_src/assets/EXTRA-Testing/describe.png" />
 </p>
 
 Sigamos...
 
 <p align="center">
-  <img src="../images/never-ends.jpg" />
+  <img src="../../_src/assets/EXTRA-Testing/never-ends.jpg" />
 </p>
 
 ___
@@ -359,7 +359,7 @@ Vayamos ahora a codear la función `book`. Recuerden evitar duplicar código reu
 </details>
 
 <p align="center">
-  <img src="../images/something-wrong.jpg" />
+  <img src="../../_src/assets/EXTRA-Testing/something-wrong.jpg" />
 </p>
 
 ¿Puede detectar algunos errores ya sea en el testing o el código de esta funcionalidad?
@@ -419,7 +419,7 @@ ___
 Para los próximos pasos ya no tendrán ayudas de código, simplemente les diremos que funcionalidades deben agregar siguiendo TDD como veníamos haciendo.
 
 <p align="center">
-  <img src="../images/i-can.jpg" />
+  <img src="../../_src/assets/EXTRA-Testing/i-can.jpg" />
 </p>
 
 Funcionalidades a agregar:

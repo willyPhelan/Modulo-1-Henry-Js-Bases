@@ -1,6 +1,15 @@
-# Henry
+---
+title: JavaScript Avanzado I
+feedbackID: 01-JavaScriptAvanzado-I
+permalink: /JS_Avanzado_I/
+eleventyNavigation:
+  key: JS Avanzado I
+  order: 2
+---
 
-<table width="100%" style='table-layout:fixed;'>
+![HenryLogo](https://static.wixstatic.com/media/85087f_0d84cbeaeb824fca8f7ff18d7c9eaafd~mv2.png/v1/fill/w_160,h_30,al_c,q_85,usm_0.66_1.00_0.01/Logo_completo_Color_1PNG.webp)
+
+<table class="hide" width="100%" style='table-layout:fixed;'>
   <tr>
 	  <td>
 	  	<a href="https://airtable.com/shr5KEX8NFdrG14j9?prefill_clase=01-JavaScriptAvanzado-I">
@@ -19,7 +28,9 @@
   </tr>
 </table>
 
-# Entendiendo JavaScript a Fondo
+# JavaScript avanzado I
+
+#### Entendiendo JavaScript a fondo
 
 Empecemos con algunos fundamentos:
 
@@ -27,11 +38,11 @@ Empecemos con algunos fundamentos:
 
 En ciencias de la computación un thread (o hilo de ejecución) es la secuencia de instrucciones más pequeña que puede ser manejada por un _planificar de recursos_ (él que se encarga de repartir el tiempo disponible de los recursos del sistema entre todos los procesos) del Sistema Operativo.
 
-![Threaded](./img/mthread.gif)
+![Threaded](../_src/assets/01-JavaScriptAvanzado-I/mthread.gif)
 
 JavaScript es __Single Threaded__ y sincrónico, es decir que sólo puede hacer un sólo comando o instruccion en cada momento y que lo hace en orden, empieza la instrucción siguiente cuando termina la anterior. Esto puede sonar confuso, porque vemos que, en el browser por ejemplo suceden muchas cosas al _mismo tiempo_ o bien, cuando tiramos una función asincrónica y esta se realiza mientras nosotros hacemos otras cosas, etc... esto sucede porque en general usamos javascript en conjunto con otros __procesos__, que pueden ser o no single threaded y en conjunto nos da la sensación que está ocurriendo todo al mismo tiempo, aunque es muy probable que no sea así.
 
-> Los procesadores son tan rápidos que nos dan la sensación de paralelismo en tareas cuando en realidad se hacen en serie. 
+> Los procesadores son tan rápidos que nos dan la sensación de paralelismo en tareas cuando en realidad se hacen en serie.
 
 ## Syntax Parser
 
@@ -41,7 +52,7 @@ Un programa que lee tu código y determina qué hace y si su sintaxis es válida
 
 El lexical environment tiene que ver con *dónde* están declarados ciertos statements o expresiones en tu código. Es decir, el comportamiento de JavaScript puede cambiar según dónde hayas escrito el código.
 
-```javascript
+```js
 function hola() {
   var foo = 'Hola!';
 }
@@ -65,17 +76,17 @@ Cada vez que ejecutamos algo en JavaScript **se corre dentro de un contexto de e
 
 Además de ejecutar el código que le pasemos, también crea un __objeto global__ y además crea una variable llamada __this__. Por ejemplo, si usamos el engine de javaScript de Chrome ( este es el intérprete ), y vamos a la consola vamos a ver que el _objeto global_ que mencionamos el es objeto `window` y que la variable `this` hace referencia a ese objeto. Esos objetos los generó el interprete cuando creó el ambiente de ejecución. Si abro otra pestaña voy a tener otro objeto `window` similar, ya que es otro contexto de ejecución.
 
-![Context](./img/context.jpg)
+![Context](../_src/assets/01-JavaScriptAvanzado-I/context.jpg)
 
 > Si corremos JavaScript en otro ambiente que no sea el browser, por ejemplo con NodeJs o con otros engines, es muy probable que el objeto global no sea `window` y sea otro. Pero siempre hay UN objeto global.
 
 En JavaScript, cuando declaramos variables y funciones en el contexto global, estos se guardan en el objeto global. Si declaramos variables y funciones en la consola de desarrollador, vamos a ver que estás aparecerán dentro de `window` que es el objeto global.
 
-![Objeto Global](./img/globalObject.png)
+![Objeto Global](../_src/assets/01-JavaScriptAvanzado-I/globalObject.png)
 
 Por último, el contexto de ejecución tambien mantiene una referencia a otros contextos de ejecución (desde donde fue creado). Como ahora hablamos del contexto global, esta referencia contiene el valor `null`, ya que no hay otro contexto que haya invocado a este.
 
-![Execution Context](./img/executionContext.png)
+![Execution Context](../_src/assets/01-JavaScriptAvanzado-I/executionContext.png)
 
 ### Creando el contexto de ejecución / Hoisting
 
@@ -99,7 +110,7 @@ En otros lenguajes, si intentaramos invocar una función o una variable que est�
 
 Para entender por qué el interprete hace esto, tenemos que saber cómo se crea el contexto de ejecución. Esto se hace en dos fases. La primera es la fase de creación (creation phase). En esta fase el interprete genera el _objeto global_, asigna la variable _this_ y las referencias a otro contexto de ejecución (Outer Context), y además reserva el espacio para todas las variables y funciones que vaya a utilizar ese contexto, justamente en este último paso es donde se genera el proceso de `hoisting`. 
 
-![Fase Creacion](./img/fasecreacion.png)
+![Fase Creacion](../_src/assets/01-JavaScriptAvanzado-I/fasecreacion.png)
 
 > El hosting es el primer ejemplo de las _cosas extras_ que hace el interprete sin que nosotros se lo pidamos. Si no las conocemos, nos puede pasar que veamos comportamientos extraños y no sepamos de donde vienen (como que podamos usar funciones que no hemos declarado antes de invocarlas!!)
 
@@ -129,7 +140,7 @@ Veamos que ocurre cuando corremos este script: Como sabemos, lo primero que pasa
 
 Lo que sucede ahora, es que se crea un _nuevo contexto de ejecución_ que se va a poner arriba del contexto de ejecución global (creando la pila). Básicamente, el contexto que esté arriba de la pila, es el que se está ejecutando en ese momento ( o cuando le den tiempo de procesador a JavaScript). Cuando se creó ese contexto nuevo, pasó lo mismo que cuando creamos el global, el intérprete generó la variable `this` y pusó las referencias al `outer context` (en este caso el outer context es el contexto global), después de hacer todo eso, el intérprete va a ejecutar línea por línea el código del nuevo contexto, es decir, _el código de la función `a`. Ahora, dentro de `a` hay una sóla línea de código, y en esa línea se invoca a `b`. Si! como se imaginan, el intérprete va a crear un _nuevo_ contexto de ejecución para la función `b` (haciendo de nuevo los pasos previamente mencionados), y poniendolo en la cima de la pila.
 
-![ExecutionStack](./img/executionStack.png)
+![ExecutionStack](../_src/assets/01-JavaScriptAvanzado-I/executionStack.png)
 
 > Cada invocación a una función crea un contexto de ejecución nuevo, que pasa por las dos fases de creación antes mencionadas. Cuando se termina de ejecutar, se _destruye_ y se saca de la pila de ejecución para seguir con los que quedan.
 
@@ -246,7 +257,7 @@ var a = suma(2,3) // 5
 
 De hecho, esa forma de escribir tiene un nombre particular, se llama notación notación `infix` o `infija`, en ella se escribe el operador entre los operandos. Pero también existen otro tipos de notación como la `postfix` o `postfija` y la `prefix` o `prefija`. En estas última el operador va a la derecha de los operandos o a la izquierda respectivamente.
 
-![Notaciones](./img/notaciones.png)
+![Notaciones](../_src/assets/01-JavaScriptAvanzado-I/notaciones.png)
 
 En fin, lo importante a tener en cuenta es que los operadores _son_ funciones.
 
@@ -310,7 +321,7 @@ Algo muy importante de JavaScript es que las funciones son de tipo `first class`
 Esta es una de las features de JavaScript que lo hace muy poderoso, hay otros lenguajes que pueden hacer lo mismo, pero el más popular es JavaScript.
 De hecho, las funciones en JavaScript son un tipo especial de objetos. Este objeto, además de poder tener cualquier propiedades adentro (como cualquier objeto) tiene dos propiedades especiales: La primera es el nombre (`name`), que contiene el nombre de la función, esta propiedad es opcional ( funciones anónimas ). La segunda propiedad se llama `code` (código) y en ella se guarda el código que escribiste para la función.
 
-![Funcion](./img/function.png)
+![Funcion](../_src/assets/01-JavaScriptAvanzado-I/function.png)
 
 En el código de abajo, declaramos una función y luego le agregamos una propiedad llamada `saludo` a ella. Como la función es un objeto, entonces podemos hacer esto sin problemas.
 
@@ -549,3 +560,7 @@ A veces es necesario acceder al objeto global dentro de nuestra función. Lo que
 ```
 
 De esta forma, tenemos acceso al objeto global y estamos protegidos de cualquier accidente. Nuestro código está a salvo!
+
+## Homework
+
+Completa la tarea descrita en el archivo [README](https://github.com/soyHenry/FT-M1/tree/master/01-JavaScriptAvanzado-I/homework)
