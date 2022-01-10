@@ -2,6 +2,7 @@
   "lessonTitle": "JavaScript Avanzado I",
   "feedbackID": "01-JavaScriptAvanzado-I",
   "permalink": "/JS_Avanzado_I/",
+  "homeworkLink": "https://github.com/soyHenry/FT-M1/tree/master/01-JavaScriptAvanzado-I/homework",
   "eleventyNavigation": {
     "key": "JS Avanzado I",
     "order": 2
