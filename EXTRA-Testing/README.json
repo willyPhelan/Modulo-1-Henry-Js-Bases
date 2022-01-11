@@ -1,7 +1,7 @@
 {
   "lessonTitle": "Software Testing",
   "permalink": "/Software_Testing/",
-  "homeworkLink": "https://github.com/soyHenry/FT-M1/tree/master/EXTRA-Testing/homework",
+  "homeworkUrl": "https://github.com/soyHenry/FT-M1/tree/master/EXTRA-Testing/homework",
   "eleventyNavigation": {
     "key": "Testing",
     "order": 9
