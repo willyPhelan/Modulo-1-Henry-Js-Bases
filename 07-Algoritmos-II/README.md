@@ -1,13 +1,4 @@
----
-title: Algoritmos II
-feedbackID: 00-PrimerosPasos
-permalink: /Algoritmos_II/
-eleventyNavigation:
-  key: Algoritmos II
-  order: 8
----
-
-![HenryLogo](https://static.wixstatic.com/media/85087f_0d84cbeaeb824fca8f7ff18d7c9eaafd~mv2.png/v1/fill/w_160,h_30,al_c,q_85,usm_0.66_1.00_0.01/Logo_completo_Color_1PNG.webp)
+![HenryLogo](https://henry-11ty-resources.s3.sa-east-1.amazonaws.com/Assets/logo-henry-white-lg.png)
 
 <table class="hide" width="100%" style='table-layout:fixed;'>
   <tr>
@@ -58,10 +49,10 @@ En el caso promedio, el orden es `O(n·log n)`.
 ### MergeSort
 
 Este algoritmo está inspirado en QuickSort, así que tambien es recursivo. Lo que hace es lo siguiente:
- 
- * Divide el conjunto en dos grupos iguales
- * Ordena recursivamente los dos grupos
- * Junta (o mergea) los grupos ordenados.
+
+* Divide el conjunto en dos grupos iguales
+* Ordena recursivamente los dos grupos
+* Junta (o mergea) los grupos ordenados.
 
 ![MergeSort](../_src/assets/06-Algoritmos-I/mergesort.gif)
 
@@ -126,7 +117,7 @@ Si nos proponemos a recorrer todos los nodos de un árbol, vamos a notar que dis
 
 Consideremos el siguiente árbol:
 
-```js 
+```js
     A
    / \
   B   C

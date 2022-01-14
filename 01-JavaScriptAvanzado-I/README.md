@@ -1,30 +1,21 @@
----
-title: JavaScript Avanzado I
-feedbackID: 01-JavaScriptAvanzado-I
-permalink: /JS_Avanzado_I/
-eleventyNavigation:
-  key: JS Avanzado I
-  order: 2
----
-
-![HenryLogo](https://static.wixstatic.com/media/85087f_0d84cbeaeb824fca8f7ff18d7c9eaafd~mv2.png/v1/fill/w_160,h_30,al_c,q_85,usm_0.66_1.00_0.01/Logo_completo_Color_1PNG.webp)
+![HenryLogo](https://henry-11ty-resources.s3.sa-east-1.amazonaws.com/Assets/logo-henry-white-lg.png)
 
 <table class="hide" width="100%" style='table-layout:fixed;'>
   <tr>
-	  <td>
-	  	<a href="https://airtable.com/shr5KEX8NFdrG14j9?prefill_clase=01-JavaScriptAvanzado-I">
-			<img src="https://static.thenounproject.com/png/204643-200.png" width="100"/>
-			<br>
-			Hacé click acá para dejar tu feedback sobre esta clase.
-	  	</a>
-	  </td>
-     	<td>
-	    <a href="https://quiz.soyhenry.com/evaluation/new/6057d0a5656c8d23c2e60e3e">
-	    	<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/HSQuiz.svg/768px-HSQuiz.svg.png" width="100" height="100"/>
-	    	<br>
-	    	Hacé click acá completar el quizz teórico de esta lecture.
-	    </a>
-	</td>
+   <td>
+    <a href="https://airtable.com/shr5KEX8NFdrG14j9?prefill_clase=01-JavaScriptAvanzado-I">
+   <img src="https://static.thenounproject.com/png/204643-200.png" width="100"/>
+   <br>
+   Hacé click acá para dejar tu feedback sobre esta clase.
+    </a>
+   </td>
+      <td>
+     <a href="https://quiz.soyhenry.com/evaluation/new/6057d0a5656c8d23c2e60e3e">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/HSQuiz.svg/768px-HSQuiz.svg.png" width="100" height="100"/>
+      <br>
+      Hacé click acá completar el quizz teórico de esta lecture.
+     </a>
+ </td>
   </tr>
 </table>
 
@@ -64,11 +55,11 @@ Por ejemplo, para el intérprete las dos declaraciones de variable del arriba te
 
 > En otros lenguajes puede que el lexical environment no cambie el comportamiento de la ejecución del código.
 
-## Execution Context 
+## Execution Context
 
 El contexto de ejecución contiene información sobre *qué* código se está ejecutando en cada momento. Además de mantener el código que tiene que ejecutar, también mantiene más información sobre desde dónde se invocó ese código, en qué lexical enviroment está, etc...
 
-### Global Enviroment 
+### Global Enviroment
 
 Cada vez que ejecutamos algo en JavaScript **se corre dentro de un contexto de ejecución**. Como todo el código corre en un contexto, si no especificamos ese contexto (veremos cómo se hace despues) entonces el código se va a ejecutar en el __contexto global__, que es el contexto de base que nos crea automáticamente el interprete.
 
@@ -76,7 +67,7 @@ Cada vez que ejecutamos algo en JavaScript **se corre dentro de un contexto de e
 
 Además de ejecutar el código que le pasemos, también crea un __objeto global__ y además crea una variable llamada __this__. Por ejemplo, si usamos el engine de javaScript de Chrome ( este es el intérprete ), y vamos a la consola vamos a ver que el _objeto global_ que mencionamos el es objeto `window` y que la variable `this` hace referencia a ese objeto. Esos objetos los generó el interprete cuando creó el ambiente de ejecución. Si abro otra pestaña voy a tener otro objeto `window` similar, ya que es otro contexto de ejecución.
 
-![Context](../_src/assets/01-JavaScriptAvanzado-I/context.jpg)
+![no-box](../_src/assets/01-JavaScriptAvanzado-I/context.jpg)
 
 > Si corremos JavaScript en otro ambiente que no sea el browser, por ejemplo con NodeJs o con otros engines, es muy probable que el objeto global no sea `window` y sea otro. Pero siempre hay UN objeto global.
 
@@ -100,7 +91,7 @@ console.log(foo);
 
 var foo = 'Hola, me declaro';
 function bar() {
-	console.log('Soy una función');
+ console.log('Soy una función');
 }
 ```
 
@@ -108,7 +99,7 @@ En otros lenguajes, si intentaramos invocar una función o una variable que est�
 
 > Podemos pensar el Hoisting como que el interprete '_mueve_' las declaraciones a la parte de már arriba de nuestro código. Sólo lo hace con las declaraciones y no con las inicializaciones.
 
-Para entender por qué el interprete hace esto, tenemos que saber cómo se crea el contexto de ejecución. Esto se hace en dos fases. La primera es la fase de creación (creation phase). En esta fase el interprete genera el _objeto global_, asigna la variable _this_ y las referencias a otro contexto de ejecución (Outer Context), y además reserva el espacio para todas las variables y funciones que vaya a utilizar ese contexto, justamente en este último paso es donde se genera el proceso de `hoisting`. 
+Para entender por qué el interprete hace esto, tenemos que saber cómo se crea el contexto de ejecución. Esto se hace en dos fases. La primera es la fase de creación (creation phase). En esta fase el interprete genera el _objeto global_, asigna la variable _this_ y las referencias a otro contexto de ejecución (Outer Context), y además reserva el espacio para todas las variables y funciones que vaya a utilizar ese contexto, justamente en este último paso es donde se genera el proceso de `hoisting`.
 
 ![Fase Creacion](../_src/assets/01-JavaScriptAvanzado-I/fasecreacion.png)
 
@@ -138,7 +129,7 @@ a();
 
 Veamos que ocurre cuando corremos este script: Como sabemos, lo primero que pasa es la creción del contexto global y el proceso de _hoisting_, entonces la función `a` y `b` van a estar en memoria. Una vez que termina eso, empieza la fase de ejecución, en esa fase es que el interprete va a recorrer línea por línea el script. En nuestro ejemplo hay una única línea para ejecutar (las otras las leyó durante el _hoisting_) que es la línea donde invocamos a `a()`.
 
-Lo que sucede ahora, es que se crea un _nuevo contexto de ejecución_ que se va a poner arriba del contexto de ejecución global (creando la pila). Básicamente, el contexto que esté arriba de la pila, es el que se está ejecutando en ese momento ( o cuando le den tiempo de procesador a JavaScript). Cuando se creó ese contexto nuevo, pasó lo mismo que cuando creamos el global, el intérprete generó la variable `this` y pusó las referencias al `outer context` (en este caso el outer context es el contexto global), después de hacer todo eso, el intérprete va a ejecutar línea por línea el código del nuevo contexto, es decir, _el código de la función `a`. Ahora, dentro de `a` hay una sóla línea de código, y en esa línea se invoca a `b`. Si! como se imaginan, el intérprete va a crear un _nuevo_ contexto de ejecución para la función `b` (haciendo de nuevo los pasos previamente mencionados), y poniendolo en la cima de la pila.
+Lo que sucede ahora, es que se crea un _nuevo contexto de ejecución_ que se va a poner arriba del contexto de ejecución global (creando la pila). Básicamente, el contexto que esté arriba de la pila, es el que se está ejecutando en ese momento ( o cuando le den tiempo de procesador a JavaScript). Cuando se creó ese contexto nuevo, pasó lo mismo que cuando creamos el global, el intérprete generó la variable `this` y pusó las referencias al `outer context` (en este caso el outer context es el contexto global), después de hacer todo eso, el intérprete va a ejecutar línea por línea el código del nuevo contexto, es decir, _el código de la función `a`. Ahora, dentro de `a` hay una sóla línea de código, y en esa línea se invoca a `b`. Si! como se imaginan, el intérprete va a crear un_nuevo_ contexto de ejecución para la función `b` (haciendo de nuevo los pasos previamente mencionados), y poniendolo en la cima de la pila.
 
 ![ExecutionStack](../_src/assets/01-JavaScriptAvanzado-I/executionStack.png)
 
@@ -185,15 +176,15 @@ Prueben el siguiente código y miren comó cambió todo cuando declaramos la fun
 var global = 'Hola!';
 
 function b(){
-	var global = 'Chao'; 
-	console.log(global); // Chao
-	function a() {
-		// como no hay una variable llamada global en este contexto,
-		// busca en el outer que es scope de b;
-		console.log(global); //Chao 
-		global = 'Hello!'; // cambia la variable del contexto de b()
-	}		
-	a();
+ var global = 'Chao'; 
+ console.log(global); // Chao
+ function a() {
+  // como no hay una variable llamada global en este contexto,
+  // busca en el outer que es scope de b;
+  console.log(global); //Chao 
+  global = 'Hello!'; // cambia la variable del contexto de b()
+ }  
+ a();
 }
 
 //a(); Ya no puedo llamar a a desde el scope global, acá no existe.
@@ -201,11 +192,11 @@ b();
 console.log(global); // 'Hola!'
 ```
 
-## Asynchronous non blocking 
+## Asynchronous non blocking
 
 Ahora que sabemos un poco más sobre cómo hace JavaScript para ejecutar el código, veamos que pasa cuando usamos una función asincrónica a la que le pasamos un callback.
 
-> __Callback__: Le llamamos así a una función que le pasamos como argumento a otra función, para que sea invocada en esta ultima, en general cuando se cumpla una condición o termine de realizar algo (leer un archivo, escribir en una base de datos, traer datos de internet, etc...) . 
+> __Callback__: Le llamamos así a una función que le pasamos como argumento a otra función, para que sea invocada en esta ultima, en general cuando se cumpla una condición o termine de realizar algo (leer un archivo, escribir en una base de datos, traer datos de internet, etc...) .
 
 Cuando decimos código _Asincrónico_ quiere que su ejecución o su completitud está diferida en el tiempo. Por ejemplo, cuando declaramos un evento, el código o la función callback se va a ejecutar cuando suceda ese evento y no cuando el intérprete lee esas líneas, o cuando hacemos un request tipo _AJAX_ y esperamos que llegue la respuesta, etc... En todos estos casos, el engine JavaScript sigue haciendo o ejecutando otras líneas de código, y esto nos puede dar la _sensación_ que estamos haciendo más de una cosa a la vez. Pero al principio dijimos que javascript es sincrónico y que ejecuta _una sóla cosa a la vez_, veamos cómo logra darnos esa [_sensación_](https://www.youtube.com/watch?v=nJXVIjxRq_A).
 
@@ -229,7 +220,7 @@ Todos los lenguajes de programación tienen características distintas que los c
 
 ### Tipos de datos Primitivos en JavaScript
 
-Un tipo de datos Primitivo, son tipos de datos básicos que vienen previamente definidos con el lenguaje. Usando estos tipos de datos primitivos vamos a poder crear tipos de datos más complejos. 
+Un tipo de datos Primitivo, son tipos de datos básicos que vienen previamente definidos con el lenguaje. Usando estos tipos de datos primitivos vamos a poder crear tipos de datos más complejos.
 En Javascript hay seis tipos de datos primitivos:
 
 * __undefined__: Este representa que algo no está definido, como por ejemplo cuando declaramos una variable y no le asignamos nada, toma el valor `undefined` por defecto.
@@ -248,9 +239,9 @@ Por ejemplo: Para el intérprete al ver el signo `+`, sabe que tiene que ejecuta
 var a = 2 + 3; // 5
 
 function suma(a,b){
-	return a + b; 
-	// usamos el mismo operador como ejemplo
-	// Si no deberiamos hacer sumas binarias!
+ return a + b; 
+ // usamos el mismo operador como ejemplo
+ // Si no deberiamos hacer sumas binarias!
 }
 var a = suma(2,3) // 5
 ```
@@ -290,7 +281,7 @@ Qué veriamos en el console.log? Para eso tenemos que revisar la tabla por la as
 
 ## Coerción de Datos
 
-Ahora, como JavaScript tiene `dynamic typing`, a veces el intérprete sólo cambia el tipo de datos de un valor a otro. Esto es conocido como __Coercion__. Por ejemplo, si hacemos `var a = 1 + 'hola'`, el resultado va a ser `1hola`. Lo que ocurrió es que el número `1` fue convertido a un string, y luego se realizó la operación de concatenado entre el `1` y el string `hola`. Lo importante es que nosotros nunca le pedimos a javascript que nos haga la conversión, el decidió hacerlo sólo (en otros lenguajes nos devolvería un error si quisieramos hacer lo mismo!). 
+Ahora, como JavaScript tiene `dynamic typing`, a veces el intérprete sólo cambia el tipo de datos de un valor a otro. Esto es conocido como __Coercion__. Por ejemplo, si hacemos `var a = 1 + 'hola'`, el resultado va a ser `1hola`. Lo que ocurrió es que el número `1` fue convertido a un string, y luego se realizó la operación de concatenado entre el `1` y el string `hola`. Lo importante es que nosotros nunca le pedimos a javascript que nos haga la conversión, el decidió hacerlo sólo (en otros lenguajes nos devolvería un error si quisieramos hacer lo mismo!).
 
 > Cuando usamos el operador `===` le estamos diciendo al intérprete que __NO__ convierta los operadores antes de hacer la comparación.
 
@@ -328,7 +319,7 @@ En el código de abajo, declaramos una función y luego le agregamos una propied
 ```javascript
 
 function hola(){
-	console.log('hola');
+ console.log('hola');
 }
 
 hola.saludo = 'Buen Día';
@@ -349,7 +340,7 @@ En javascript, en términos de funciones podemos tener ambos `functions statemen
 
 ```javascript
 function saludo(){
-	console.log('hola');
+ console.log('hola');
 }
 ```
 
@@ -357,11 +348,11 @@ El de arriba es un `function statement`, cuando esto es ejecutado por el intérp
 
 ```javascript
 var saludo = function(){
-	console.log('Hola!');
+ console.log('Hola!');
 }
 
 console.log(function(){
-	//hola;
+ //hola;
 })
 ```
 
@@ -475,21 +466,20 @@ console.log(o.f()); // logs 37
 
 De todos modos, hay que tener cuidado con el keyword `this`, ya que pueden aparecer casos donde es contraintuitivo ( Como varias cosas de JavaScript ). Veamos el siguiente ejemplo:
 
-
 ```javascript
 var obj = {
-	nombre: 'Objeto',
-	log   : function(){
-		this.nombre = 'Cambiado'; // this se refiere a este objeto, a `obj`
-		console.log(this)  // obj
+ nombre: 'Objeto',
+ log   : function(){
+  this.nombre = 'Cambiado'; // this se refiere a este objeto, a `obj`
+  console.log(this)  // obj
 
-		var cambia = function( str ){
-			this.nombre = str;  // Uno esperaria que this sea `obj`
-		}
+  var cambia = function( str ){
+   this.nombre = str;  // Uno esperaria que this sea `obj`
+  }
 
-		cambia('Hoola!!');
-		console.log(this);
-	}
+  cambia('Hoola!!');
+  console.log(this);
+ }
 }
 ```
 
@@ -503,20 +493,20 @@ Para resolver este tipo de problemas existe un patrón muy común, y se basa en 
 
 ```javascript
 var obj = {
-	nombre: 'Objeto',
-	log   : function(){
-		this.nombre = 'Cambiado'; // this se refiere a este objeto, a `obj`
-		console.log(this)  // obj
+ nombre: 'Objeto',
+ log   : function(){
+  this.nombre = 'Cambiado'; // this se refiere a este objeto, a `obj`
+  console.log(this)  // obj
 
-		var that = this; // Guardo la referencia a this
+  var that = this; // Guardo la referencia a this
 
-		var cambia = function( str ){
-			that.nombre = str;  // Uso la referencia dentro de esta funcion
-		}
+  var cambia = function( str ){
+   that.nombre = str;  // Uso la referencia dentro de esta funcion
+  }
 
-		cambia('Hoola!!');
-		console.log(this);
-	}
+  cambia('Hoola!!');
+  console.log(this);
+ }
 }
 ```
 
@@ -528,7 +518,7 @@ Vamos a ver un concepto ampliamente usado por los desarrolladores de JavaScript,
 
 ```javascript
 var hola = function(){
-	return 'hola';
+ return 'hola';
 }() // ACA ESTOY INVOCANDO LA FUNCIÓN!.
 ```
 
@@ -536,7 +526,7 @@ Lo que hicimos fue _invocar la función inmediatamente despues de escribir la ex
 
 ```javascript
 var hola = function( nombre ){
-	return 'Hola ' + nombre;
+ return 'Hola ' + nombre;
 }('Toni')
 ```
 
@@ -546,16 +536,17 @@ También podemos declarar funciones anónimas en una `function expression` y __e
 
 ```javascript
 (function(nombre){
-	console.log(nombre);
+ console.log(nombre);
 }('Toni')) // IIFE
 ```
+
 Este es el clásico ejemplo de una _IIFE_, este patrón lo vas a ver en casi todos las librerías y frameworks que hay hoy. Ya que nos permite ejecutar código _sobre la marcha_. Además, cuando llega a esa linea, y ejecuta esa función, el interprete invoca la función y por lo tanto crea un nuevo _contexto de ejecución_ para ese código. Por lo tanto, las variables que declare adentro, van a estar viviendo en ese nuevo _contexto_ y no en el __contexto global__. Esto último es lo más importante de este patrón, ya que nos crea un nuevo _namespace_ sólo para nosotros y estamos seguros que no vamos a colisionar con variables que fueron declaradas en el contexto global por otras personas (Justamente por esto, los frameworks y librerías utilizan fuertemente este patrón).
 
 A veces es necesario acceder al objeto global dentro de nuestra función. Lo que podemos hacer, es pasar una referencia al objeto global cuando invocamos nuestra función:
 
 ```javascript
 (function(global, nombre){
-	console.log(nombre);
+ console.log(nombre);
 }(window, 'Toni')) // IIFE
 ```
 

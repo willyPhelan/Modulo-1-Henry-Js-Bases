@@ -1,13 +1,4 @@
----
-title: Algoritmos I
-feedbackID: 00-PrimerosPasos
-permalink: /Algoritmos_I/
-eleventyNavigation:
-  key: Algoritmos I
-  order: 7
----
-
-![HenryLogo](https://static.wixstatic.com/media/85087f_0d84cbeaeb824fca8f7ff18d7c9eaafd~mv2.png/v1/fill/w_160,h_30,al_c,q_85,usm_0.66_1.00_0.01/Logo_completo_Color_1PNG.webp)
+![HenryLogo](https://henry-11ty-resources.s3.sa-east-1.amazonaws.com/Assets/logo-henry-white-lg.png)
 
 <table class="hide" width="100%" style='table-layout:fixed;'>
   <tr>
@@ -254,7 +245,7 @@ Encontrar un máximo en un arreglo:
 
 ```js
 var max = array[0];
-for( var i = 0; i <= array.lenght; i++){
+for( var i = 0; i <= array.length; i++){
  if( array[i] > max) {
   max = array[i];
  }
@@ -267,13 +258,13 @@ Máximo y Mínimo:
 
 ```javascript
 var max = array[0];
-for( var i = 0; i <= array.lenght; i++){
+for( var i = 0; i <= array.length; i++){
  if( array[i] > max) {
   max = array[i];
  }
 }
 var min = array[0];
-for( var i = 0; i <= array.lenght; i++){
+for( var i = 0; i <= array.length; i++){
  if( array[i] < max) {
   min = array[i];
  }
@@ -289,7 +280,7 @@ Mejorando un algoritmo:
 ```javascript
 var max = array[0];
 var min = array[0];
-for( var i = 0; i <= array.lenght; i++){
+for( var i = 0; i <= array.length; i++){
  if( array[i] > max) {
   max = array[i];
  }
@@ -305,8 +296,8 @@ console.log(min);
 Buscar elementos iguales en un arreglo:
 
 ```javascript
-for( var i = 0; i <= array.lenght; i++){
- for( var j = 0; j <= array.lenght; j++){
+for( var i = 0; i <= array.length; i++){
+ for( var j = 0; j <= array.length; j++){
    if(array[i] === array[j]){
     return true;
    }
@@ -464,6 +455,7 @@ O sea que para cada elemento de la lista, tenemos que recorrer n-1 elementos res
 ### BubbleSort
 
 Este algoritmo es muy simple:
+
  1. Recorré los elementos: si dos items adyacentes estan desordenados, hacé un swap.
  2. Si terminas un recorrido sin hacer un swap, ya está ordenado.
 

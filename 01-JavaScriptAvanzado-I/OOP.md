@@ -28,16 +28,16 @@ Veamos algunos ejemplos:
 
 ```javascript
 var persona = {
-	nombre: 'Default',
-	apellido: 'Default',
-	getNombre: function() {
-		return this.nombre + ' ' + this.apellido;
-	}
+ nombre: 'Default',
+ apellido: 'Default',
+ getNombre: function() {
+  return this.nombre + ' ' + this.apellido;
+ }
 }
 
 var juan = {
-	nombre: 'Juan',
-	apellido: 'Maquiavelo'
+ nombre: 'Juan',
+ apellido: 'Maquiavelo'
 }
 
 // no hacer esto en producción es sólo para demostración
@@ -54,18 +54,18 @@ juan.getNombre();
 
 # Todo es un objeto en JavaScript (o una primitiva)
 
-Cualquier cosa en JavaScript que NO sea una primitiva, es un objeto! O sea: funciones, arreglos, objetos, todos tienen un prototipo. 
+Cualquier cosa en JavaScript que NO sea una primitiva, es un objeto! O sea: funciones, arreglos, objetos, todos tienen un prototipo.
 Sin embargo hay un objeto especial, que no tiene un prototipo. Este objeto se llama `base object`. Este objeto se encuentra siempre al final del prototype chain, y termina ahí porque `base object` no tiene un prototype.
 
-De hecho, `base object` tiene definido una serie de propiedades y métodos. Y como todos los demás objetos lo tiene en su cadena de prototipos, entonces, estos métodos y propiedades son accesibles por todos los objetos de JavaScript. Por ejemplo, el método `toString` está definido en el `base object`. 
+De hecho, `base object` tiene definido una serie de propiedades y métodos. Y como todos los demás objetos lo tiene en su cadena de prototipos, entonces, estos métodos y propiedades son accesibles por todos los objetos de JavaScript. Por ejemplo, el método `toString` está definido en el `base object`.
 
 En el caso de cualquier función, su prototipo por defecto es un objeto llamado `Empty`, que es a su vez una función. Cualquier función que creemos va a tener este proto y por ende van a tener acceso a todas las propiedades y métodos de `Empty`. Por ejemplo, la funciones `apply`, `bind` y `call` están definidas en este Objeto.
 
-Con los arreglos pasa algo similar, todos los arreglos tiene como proto a un `arreglo base`. En este último se encuntran definido todos los métodos que usamos en los arreglos, como `push`, `shift`, `lenght`, etc...
+Con los arreglos pasa algo similar, todos los arreglos tiene como proto a un `arreglo base`. En este último se encuntran definido todos los métodos que usamos en los arreglos, como `push`, `shift`, `length`, etc...
 
 Veamos un ejemplo:
 
-```
+```js
 var a = {}; // un objeto vacio
 var b = function(){ };
 var c = [];
@@ -99,28 +99,28 @@ Por ejemplo:
 
 ```javascript
 var persona = {
-	nombre: 'Default',
-	apellido: 'Default',
-	getNombre : function() {
-		return this.nombre + ' ' + this.apellido;
-	}
+ nombre: 'Default',
+ apellido: 'Default',
+ getNombre : function() {
+  return this.nombre + ' ' + this.apellido;
+ }
 };
 
 var santi = {
-	nombre: 'Santi',
-	apellido: 'Scanlan'
+ nombre: 'Santi',
+ apellido: 'Scanlan'
 };
 
 santi.__proto__ = persona;
 
 for (var key in santi){
-	console.log( key + ":" + santi[key] );
+ console.log( key + ":" + santi[key] );
 } // imprime todo! inclusive getNombre, que esta en su proto.
 
 for(var key in santi){
-	if(santi.hasOwnProperty(key)){
-		console.log( key + ":" + santi[key] );
-	}// imprime solo las propiedades del objeto Santi.
+ if(santi.hasOwnProperty(key)){
+  console.log( key + ":" + santi[key] );
+ }// imprime solo las propiedades del objeto Santi.
 }
 ```
 
@@ -130,15 +130,15 @@ En este ejemplo, tenemos varios objetos que tiene algunas propiedades y/o métod
 
 ```javascript
 var guille = {
-	direccion : 'Armenia 636 6to F',
-	getNombreFormal : function(){
-		return this.apellido + ', ' + this.nombre
-	}
+ direccion : 'Armenia 636 6to F',
+ getNombreFormal : function(){
+  return this.apellido + ', ' + this.nombre
+ }
 }
 var toni = {
-	getPrimerNombre : function() {
-		return this.nombre;
-	}
+ getPrimerNombre : function() {
+  return this.nombre;
+ }
 }
 
 _.extend(santi, guille, toni);
@@ -156,11 +156,11 @@ Ya conocemos algunas, como _objects literals_:
 
 ```javascript
 var objeto = {
-	propiedad1: valor1,
-	propiedad2: valor2,
-	metodo1   : function1() {
+ propiedad1: valor1,
+ propiedad2: valor2,
+ metodo1   : function1() {
 
-	}
+ }
 }
 ```
 
@@ -174,8 +174,8 @@ Veamos un ejemplo de la sintaxis del keyword `this` y cómo funciona examinando 
 
 ```javascript
 function Persona() {
-	this.firstname = 'Juan';
-	this.lastname = 'Perez';
+ this.firstname = 'Juan';
+ this.lastname = 'Perez';
 }
 
 var juan = new Persona();
@@ -195,13 +195,14 @@ Por lo tanto, esto nos permite crear un objeto al invocar una función, justamen
 
 ```javascript
 function Persona(nombre, apellido){
-	this.nombre = nombre || 'Juan';
-	this.apellido = apellido || 'Perez';
+ this.nombre = nombre || 'Juan';
+ this.apellido = apellido || 'Perez';
 }
 var toni = new Persona('Toni', 'Tralice');
 var santi = new Persona('Santi', 'Scanlan');
 var guille = new Persona('Guille', 'Aszyn');
 ```
+
 No pierdan de vista, que estamos invocando una función, asi que podemos utilizar adentro __todo__ los que sabemos de funciones.
 
 Lo que todavía no vimos, es cómo setear el __proto__ cuando creamos objetos usando `function constructors`. Antes que nada, veamos qué objeto tienen seteado como __proto__ los objetos creados con algún `function constructor`. Sorpresa! Ya tienen seteados un __proto__ y cómo vemos, hace referencia a un objeto que tiene el mismo nombre que la función que los construye. Para entender esto, tenemos que recordar qué las funciones son objetos especiales, que tenian algunas propiedades extras cómo `Code` y `Name`. También tenemos que saber que _todas_ las funciones tienen la propiedad `prototype`, y que se setea siempre cómo un objeto vacío, __cuando invocamos la función con el operador `new`__  la propiedad `prototype` de la función va a ser usada como el \_\_proto\_\_ de __todos__ los objetos que hayan sido creadas con ella.  
@@ -212,11 +213,11 @@ Por lo tanto, todo lo que pongamos dentro de la propiedad `prototype` de la func
 
 ```javascript
 function Persona(nombre, apellido){
-	this.nombre = nombre || 'Juan';
-	this.apellido = apellido || 'Perez';
+ this.nombre = nombre || 'Juan';
+ this.apellido = apellido || 'Perez';
 }
 Persona.prototype.getNombre = function () {
-	return this.nombre + ' ' + this.apellido;
+ return this.nombre + ' ' + this.apellido;
 }
 
 var toni = new Persona('Toni', 'Tralice');
@@ -230,14 +231,14 @@ guille.getNombre() // :D
 
 > Agregar funciones en el prototype del constructor y no dentro del mismo, es una buena practica. __Ya que tener metodos replicados en cada objeto ocupa mucho espacio__. En cambio, si los tenemos en el proto, todos comparten el mismo.
 
-## Object.create y Pure Pototypal Inheritance.
+## Object.create y Pure Pototypal Inheritance
 
 Dijimos que los _function constructors_ fueron creados pensados en imitar el comportamiento de otros lenguajes de programación, por lo tanto son un poco extraños. Existen muchos programadores que directamente dicen que es mejor aceptar el hecho que JavaScript tiene un modelo de herencia basado en prototipos ( a diferencia de otros modelos de herencia de otros lenguajes ) y que para crear objetos usemos métodos consecuentes a este hecho. Para hacerlo, javaScript nos provee de la función 'Object.create'. Veamos como funciona:
 
 ```javascript
 var person = {
-	nombre: 'Defecto',
-	apellido: 'Defecto'
+ nombre: 'Defecto',
+ apellido: 'Defecto'
 }; // un objeto cualquiera
 
 var Santi = Object.create(person); // le paso el objeto que creamos
@@ -261,15 +262,15 @@ En la última versión del estandar JS va a tener la posibilidad de declarar [cl
 
 ```javascript
 class Persona {
-	
-	constructor (nombre, apellido){
-		this.nombre = nombre,
-		this.apellido = apellido
-	}
+ 
+ constructor (nombre, apellido){
+  this.nombre = nombre,
+  this.apellido = apellido
+ }
 
-	saludar() {
-		console.log('Hola!' + this.nombre);
-	}
+ saludar() {
+  console.log('Hola!' + this.nombre);
+ }
 }
 
 var toni = new Persona('Toni', 'Tralice');
@@ -284,11 +285,11 @@ Para agregar un prototipo a la clase creada se utiliza el keyword __extends__, q
 
 ```javascript
 class Empleado extends Persona {
-	constructor (nombre, apellido, empleo, sueldo){
-		super(nombre, apellido);
-		this.empleo = empleo;
-		this.sueldo = sueldo;
-	}
+ constructor (nombre, apellido, empleo, sueldo){
+  super(nombre, apellido);
+  this.empleo = empleo;
+  this.sueldo = sueldo;
+ }
 }
 
 var toni = new Empleado('Toni', 'Tralice', 'Profesor', 100);
@@ -321,11 +322,11 @@ Veamos algunos conceptos claves de OOP:
 
 Como la OOP es un _paradigma_, cada lenguaje lo interpreta y lo implementa de distintas maneras. De hecho, Javascript no usa el concepto de _herencia_, si que utiliza el concepto de _prototipado_, que de alguna forma lo emula. Es decir, que hay lenguajes donde podemos programar orientado a objetos pero que no es la única forma en la que podemos programar. Vamos a hacer una comparación con __Java__, que es un lenguaje muy preparado para programar OOP:
 
-|Class-based (Java)	|Prototype-based (JavaScript)|
+|Class-based (Java) |Prototype-based (JavaScript)|
 |-------------------|----------------------------|
-| Clases y Objetos son entidades distintas. |	Todos los objetos pueden heredad de otro objeto.|
-|Se define una clase con una definición de clase, y se instacia un objeto de esa clase usando un constructor |	Se define y se crean objetos usando una función constructor.|
-|Crea un nuevo objeto con el operador _new_	| Lo mismo.|
-|Construye una jerarquía de clases, donde cada clase hereda de otras clases existentes.	|Construye una jerarquía de objetos, donde cada objeto tiene asociado un prototipo con un constructor.|
-|Los objetos heredan propiedades y métodos según la cadena de clases.	| Los objetos heredan propiedades y métodos siguiente la cadena de prototipos.|
-| La definición de una clase especifica _TODAS_ las propiedades y métodos de ella, no se pueden cambiar dinámicamente durante el _run time_.	| Las funciones constructoras especifican una serie de propiedades y métodos _INICIALES_. Se pueden agregar o sacar propiedades y méetodos dinámicamente durante el _run time_.|
+| Clases y Objetos son entidades distintas. | Todos los objetos pueden heredad de otro objeto.|
+|Se define una clase con una definición de clase, y se instacia un objeto de esa clase usando un constructor | Se define y se crean objetos usando una función constructor.|
+|Crea un nuevo objeto con el operador _new_ | Lo mismo.|
+|Construye una jerarquía de clases, donde cada clase hereda de otras clases existentes. |Construye una jerarquía de objetos, donde cada objeto tiene asociado un prototipo con un constructor.|
+|Los objetos heredan propiedades y métodos según la cadena de clases. | Los objetos heredan propiedades y métodos siguiente la cadena de prototipos.|
+| La definición de una clase especifica _TODAS_ las propiedades y métodos de ella, no se pueden cambiar dinámicamente durante el _run time_. | Las funciones constructoras especifican una serie de propiedades y métodos _INICIALES_. Se pueden agregar o sacar propiedades y méetodos dinámicamente durante el _run time_.|

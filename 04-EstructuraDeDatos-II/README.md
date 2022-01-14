@@ -1,13 +1,4 @@
----
-title: Estructura de datos II
-feedbackID: 00-PrimerosPasos
-permalink: /Estructura_de_datos_II/
-eleventyNavigation:
-  key: Datos II
-  order: 5
----
-
-![HenryLogo](https://static.wixstatic.com/media/85087f_0d84cbeaeb824fca8f7ff18d7c9eaafd~mv2.png/v1/fill/w_160,h_30,al_c,q_85,usm_0.66_1.00_0.01/Logo_completo_Color_1PNG.webp)
+![HenryLogo](https://henry-11ty-resources.s3.sa-east-1.amazonaws.com/Assets/logo-henry-white-lg.png)
 
 <table class="hide" width="100%" style='table-layout:fixed;'>
   <tr>
@@ -29,7 +20,6 @@ eleventyNavigation:
 </table>
 
 # Estructuras de Datos II
-
 
 ## Listas Enlazadas
 
@@ -68,17 +58,17 @@ Veamos que operaciones podemos hacer en una lista:
 
 * _Iterar sobre la lista_: Recorrer la lista viendo sus elementos o hasta que encontremos el elemento deseado.
 * _Insertar un nodo_: La operación va a cambiar según el lugar donde querramos insertar el nodo nuevo:
-    * Al principio de la lista.
-    * En el medio de la lista.
-    * Al final de la lista.
+  * Al principio de la lista.
+  * En el medio de la lista.
+  * Al final de la lista.
 
 ![InsertarTop](../_src/assets/03-EstructuraDeDatos-I/listAdd.gif)
 
 _El orden en el que actualizan los punteros es muy importante. Si actualizan el la cabeza de la lista primero, pierden la lista!!_
 
 * _Sacar un nodo_:
-    * Del principio de la lista.
-    * Del medio de la lista.
+  * Del principio de la lista.
+  * Del medio de la lista.
 
 ![ScarNodo](../_src/assets/03-EstructuraDeDatos-I/listaRemove.gif)
 
@@ -147,7 +137,7 @@ De hecho, la función que transforman un elemento en una cadena de longitud fini
 Como las funciones hash nos devuelven un número finito de posibilidades, vamos a tener que reservar la misma cantidad de memoria para poder guardar cualquier cosa que, al ser hasheada, 'caiga' en esa key. Por lo tanto, las tablas hash van a ocupar más espacio, con el objetivo de ganar velocidad. De nuevo, según la naturaleza del problema te a convenir o no usarlas.
 
 Para construir una hash table vamos a necesitar:
-    
+
 * _Una estrucura de datos_:  Acá vamos a guardar los datos y buscarlos por el índice. Puede ser un arreglo, o un árbol, etc..
 * _Una función hasheadora_: Vamos a necesitar una función que nos transforme lo que elegimos de key a un hash que será nuestro índice.
 * _Una política de resolución de colisiones_: Es la política que definiremos para decidir qué pasa cuando dos keys distintas generar dos hash iguales (las funciones no son perfectas !).
