@@ -46,7 +46,7 @@ En el peor caso, el pivote termina en un extremo de la lista. El orden de comple
 El peor caso dependerá de la implementación del algoritmo, aunque habitualmente ocurre en listas que se encuentran ordenadas, o casi ordenadas. Pero principalmente depende del pivote, si por ejemplo el algoritmo implementado toma como pivote siempre el primer elemento del array, y el array que le pasamos está ordenado, siempre va a generar a su izquierda un array vacío, lo que es ineficiente.
 En el caso promedio, el orden es `O(n·log n)`.
 
-### MergeSort
+## MergeSort
 
 Este algoritmo está inspirado en QuickSort, así que tambien es recursivo. Lo que hace es lo siguiente:
 
