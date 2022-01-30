@@ -18,9 +18,9 @@
   </tr>
 </table>
 
-# JavaScript avanzado II
+# JavaScript
 
-#### Entendiendo JavaScript a fondo
+#### Avanzado II
 
 ## Closures
 

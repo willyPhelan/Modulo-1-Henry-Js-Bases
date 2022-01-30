@@ -19,9 +19,9 @@
   </tr>
 </table>
 
-# JavaScript avanzado I
+# JavaScript 
 
-#### Entendiendo JavaScript a fondo
+#### Avanzado I
 
 Empecemos con algunos fundamentos:
 
