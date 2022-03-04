@@ -10,11 +10,11 @@ No vamos a hablar mucho de la [herencia clásica](https://en.wikipedia.org/wiki/
 
 Como sabemos, los objetos de javascript tienen propiedades y métodos, y sabemos cómo acceder a ellos. Lo que no sabíamos es que además de las propiedades y métodos que nosotros le agregamos __todos los objetos tienen una referencia a otro objeto llamado proto__. Veamos para que le sirve:
 
-![PrototypalInheritance](./img/protoypeInheritance.png)
+![PrototypalInheritance](/_src/assets/01-JavaScriptAvanzado-I/protoypeInheritance.png)
 
 En el ejemplo de arriba tenemos al objeto `Objeto`, que contiene dos propiedades `propiedad1` y `propiedad2`. Por lo tanto si quisiera acceder a cualquiera de esas propiedades podría usar la `dot notation`: `Objeto.propiedad1`. Ahora, como se ve en la imagen `Objeto` tiene una referencia a otro objeto llamado `proto`, y a su vez este objeto tiene una propiedad llamada `propiedad3`. Ahora lo interesante, es que si nosotros queremos acceder a la `propiedad3` del objeto `Objeto`, lo vamos a poder hacer! Cuando escribimos `Objeto.propiedad3` lo que ocurre es que el intérprete busca en el objeto por esa propiedad, y si no la encuentra antes de lanzar un error, busca en el objeto `proto` (que lo tienen _todos_ los objetos) a ver si no encuentra esa propiedad, si la encuentra la devuelve.
 
-![PrototypeChain](./img/protoypeInheritance2.png)
+![PrototypeChain](/_src/assets/01-JavaScriptAvanzado-I/protoypeInheritance2.png)
 
 De hecho, el objeto al que hace referencia `proto` también podría tener una referencia a otro `proto`. Digamos el objeto al que hace referencia el segundo `proto` contiene la propiedad `propiedad4`. Si nosotros intentaramos acceder a `propiedad4` desde `Objeto` usando `Objeto.propiedad4`, el interprete primero buscaría en `Objeto`, como no está esa propiedad ahí entonces va a buscar en el objeto al que hace referencia `proto`, como tampoco está ahí se fija si ese objeto tiene una referencia en `proto`, como la tiene, va a buscar la propiedad en ese objeto al que hace referencia. En nuestro ejemplo, finalmente encuentra la `propiedad4` en este último y por lo tanto la accede. Esto es lo que se conoce como __Prototype Chain__.
 
@@ -22,7 +22,7 @@ De hecho, el objeto al que hace referencia `proto` también podría tener una re
 
 Lo más importante de esto, es que si tuvieramos un segundo objeto: `Objeto 2`, cuya propiedad `proto` hace referencia al _mismo objeto_ al que hacia referencia el `proto` de `Objeto`, entonces ambos objetos __compartirian__ un subset de propiedades. En este caso, si quisieramos acceder a `Objeto2.propiedad3` (que no existe en el objeto 2), la encontraríamos siguiendo el prototype chain, y accederiamos a la misma propiedad que si hicieramos `Objeto1.propiedad3`.
 
-![Herencia](./img/protoypeInheritance3.png)
+![Herencia](/_src/assets/01-JavaScriptAvanzado-I/protoypeInheritance3.png)
 
 Veamos algunos ejemplos:
 
