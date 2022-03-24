@@ -59,6 +59,7 @@ console.log(instructor);
 })();
 console.log(instructor);
 ```
+
 ```javascript
 var instructor = "Tony";
 let pm = "Franco";
