@@ -11,10 +11,60 @@
 // search: Busca un valor dentro de la lista. Puede recibir un valor o una función. Si no hubiera resultados, devuelve null.
 
 function LinkedList() {
+  this.head = null ; 
+  }
 
+  LinkedList.prototype.add = function (value) { 
+    let newNode = new Node (value) ; 
+    if (!this.head) { 
+      this.head = newNode 
+    }
+    else { 
+      let current = this.head ; 
+      while (current.next) {
+        current = current.next 
+      }
+      current.next = newNode ; 
+    }
+  }
+
+LinkedList.prototype.remove = function () {
+  if (!this.head) return null  ; 
+  if (!this.head.next) { 
+    let value = this.head.value ;
+    this.head = null ; 
+    return value ; 
+  }
+  let current = this.head ; 
+  while (current.next.next) {
+    current = current.next ; 
+  }
+  let value = current.next.value ; 
+  current.next = null ; 
+  return value ; 
 }
 
-function Node(value){
+LinkedList.prototype.search = function (val) { 
+  let current = this.head ;
+
+  while (current) { 
+    if (typeof val === 'function') {
+      if (val(current.value)) return current.value } 
+      else {
+        if (current.value === val) 
+          return current.value ; 
+        }
+        current = current.next  ;}
+        return null ; 
+ }
+  
+
+
+
+function Node(value){ 
+  this.value = value ; 
+  this.next = null ; 
+
 
 }
 
@@ -30,9 +80,42 @@ function Node(value){
 //    - Usar el número obtenido, para buscar(llamando al método get) el contenedor o bucket donde está el valor.
 //    - Retornar dicho valor.
 
-function HashTable() {
-
+function HashTable () {
+ this.Buckets = [] ;
+ this.numBuckets = 35 ;  
 }
+
+HashTable.prototype.hash = function (key) { 
+  let suma = 0 ;
+  for (let i = 0 ; i < key.length ; i++) {
+    suma += key.charCodeAt(i) ; }
+    return suma % this.numBuckets ; 
+  }
+
+HashTable.prototype.set = function (key, value) {
+      if (typeof key !== 'string' ) throw new TypeError ('Keys must be strings') ; 
+      var i = this.hash(key);
+      if (this.Buckets[i] === undefined) {
+        this.Buckets[i] = {} ; 
+      }
+this.Buckets[i][key] = value ; 
+    }
+
+
+HashTable.prototype.get = function (key) {
+  let i = this.hash(key) ; 
+  return this.Buckets[i][key]
+}
+
+HashTable.prototype.hasKey = function (key) { 
+  var i = this.hash(key) ;
+  return this.Buckets[i].hasOwnProperty(key) ; }
+
+
+   
+
+    
+  
 
 
 // No modifiquen nada debajo de esta linea
